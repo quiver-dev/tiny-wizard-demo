@@ -1,0 +1,3 @@
+[submodule "top-down-shooter-core"]
+	path = top-down-shooter-core
+	url = git@github.com:quiver-dev/top-down-shooter-core.git
