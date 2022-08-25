@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://fq64wndduj8e"]
+
+[ext_resource type="Script" path="res://demos/tiny_wizard/gui/inventory_ui/InventoryUI.gd" id="1_41nm0"]
+[ext_resource type="Resource" uid="uid://bpvgw7v25bbsx" path="res://demos/tiny_wizard/player/inventory/inventory.tres" id="2_6tb0s"]
+[ext_resource type="Texture2D" uid="uid://cm2jd54cbs5sv" path="res://demos/tiny_wizard/assets/placeholder_art/GUI/Coin.png" id="3_x7efp"]
+[ext_resource type="Texture2D" uid="uid://bar0pco0nblk6" path="res://demos/tiny_wizard/assets/placeholder_art/GUI/BombIcon.png" id="4_ojjo4"]
+[ext_resource type="Texture2D" uid="uid://bd1nvqea1ajte" path="res://demos/tiny_wizard/assets/placeholder_art/GUI/Key.png" id="5_skni8"]
+
+[node name="InventoryUI" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource( "1_41nm0" )
+inventory = ExtResource( "2_6tb0s" )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 42.0
+offset_bottom = 97.0
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Coins" type="HBoxContainer" parent="VBoxContainer"]
+offset_right = 42.0
+offset_bottom = 26.0
+
+[node name="CoinsCount" type="Label" parent="VBoxContainer/Coins"]
+offset_right = 10.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="CoinsIcon" type="TextureRect" parent="VBoxContainer/Coins"]
+offset_left = 14.0
+offset_right = 42.0
+offset_bottom = 26.0
+texture = ExtResource( "3_x7efp" )
+stretch_mode = 3
+
+[node name="Bombs" type="HBoxContainer" parent="VBoxContainer"]
+offset_top = 32.0
+offset_right = 42.0
+offset_bottom = 65.0
+
+[node name="BombsCount" type="Label" parent="VBoxContainer/Bombs"]
+offset_top = 3.0
+offset_right = 10.0
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="BombsIcon" type="TextureRect" parent="VBoxContainer/Bombs"]
+offset_left = 14.0
+offset_right = 40.0
+offset_bottom = 33.0
+texture = ExtResource( "4_ojjo4" )
+stretch_mode = 3
+
+[node name="Keys" type="HBoxContainer" parent="VBoxContainer"]
+offset_top = 71.0
+offset_right = 42.0
+offset_bottom = 97.0
+
+[node name="KeysCount" type="Label" parent="VBoxContainer/Keys"]
+offset_right = 10.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0"
+
+[node name="KeysIcon" type="TextureRect" parent="VBoxContainer/Keys"]
+offset_left = 14.0
+offset_right = 40.0
+offset_bottom = 26.0
+texture = ExtResource( "5_skni8" )
+stretch_mode = 3

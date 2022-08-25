@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://6d63alr8jx35"]
+
+[ext_resource type="Script" path="res://template_core/items/item.gd" id="1_isq16"]
+
+[resource]
+script = ExtResource( "1_isq16" )
+name = "Coin"
+short_description = "A coin to get rich"
+long_description = null
+stackable = true
+stack_size = null
+pickable_item_scene = "res://demos/tiny_wizard/items/coin/coin.tscn"

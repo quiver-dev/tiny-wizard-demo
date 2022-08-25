@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://djy8e0bt15gha"]
+
+[ext_resource type="PackedScene" uid="uid://23m7r5q686kd" path="res://demos/tiny_wizard/items/default_items/default_add_to_inventory_item.tscn" id="1_xatpr"]
+[ext_resource type="Resource" uid="uid://ca80nqtdifi7q" path="res://demos/tiny_wizard/items/key/key.tres" id="2_dkjd1"]
+[ext_resource type="Texture2D" uid="uid://b2er80wkoc0wx" path="res://demos/tiny_wizard/assets/placeholder_art/items/Key.png" id="3_1tq13"]
+
+[node name="Key" instance=ExtResource( "1_xatpr" )]
+item = ExtResource( "2_dkjd1" )
+
+[node name="Item" parent="RigidDynamicBody2D" index="1"]
+position = Vector2(1, -11)
+texture = ExtResource( "3_1tq13" )
+
+[node name="Shadow" parent="RigidDynamicBody2D" index="2"]
+position = Vector2(0.999998, -1.17277)
+scale = Vector2(0.526316, 0.287376)
+
+[node name="OnFailure" parent="Action" index="1"]
+script = null

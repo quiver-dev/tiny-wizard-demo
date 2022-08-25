@@ -1,0 +1,69 @@
+[gd_scene load_steps=14 format=3 uid="uid://ck7ptvnvveft"]
+
+[ext_resource type="PackedScene" uid="uid://ckan5lwiqvq2a" path="res://template_core/character/character.tscn" id="1_5wxj1"]
+[ext_resource type="Script" path="res://template_core/character/character_stats/character_stats.gd" id="2_72r4n"]
+[ext_resource type="Texture2D" uid="uid://dnqeytbkukgjf" path="res://demos/tiny_wizard/assets/placeholder_art/Fly.png" id="2_blmnv"]
+[ext_resource type="Script" path="res://demos/tiny_wizard/enemies/black_fly/Visual.gd" id="2_w4t8f"]
+[ext_resource type="Texture2D" uid="uid://07bwu3183fl" path="res://demos/tiny_wizard/assets/placeholder_art/Shadow.png" id="3_m8u5l"]
+[ext_resource type="Script" path="res://demos/tiny_wizard/enemies/black_fly/behavior.gd" id="5_yqn2h"]
+[ext_resource type="PackedScene" path="res://demos/tiny_wizard/enemies/red_fly/red_fly_weapon.tscn" id="7_g7bvv"]
+
+[sub_resource type="Resource" id="Resource_xpmbt"]
+resource_local_to_scene = true
+script = ExtResource( "2_72r4n" )
+max_life = 5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68rp0"]
+atlas = ExtResource( "2_blmnv" )
+region = Rect2(0, 0, 60, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpw2m"]
+atlas = ExtResource( "2_blmnv" )
+region = Rect2(60, 0, 60, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrf4e"]
+animations = [{
+"frames": [SubResource( "AtlasTexture_68rp0" ), SubResource( "AtlasTexture_hpw2m" )],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bk4cl"]
+radius = 15.0923
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6gp4s"]
+radius = 7.0
+
+[node name="BlackFly" instance=ExtResource( "1_5wxj1" )]
+process_mode = 4
+scale = Vector2(0.6, 0.6)
+y_sort_enabled = true
+collision_layer = 8
+character_stats = SubResource( "Resource_xpmbt" )
+max_speed = 75.0
+impulse_force = 500.0
+
+[node name="Visual" parent="." index="0"]
+script = ExtResource( "2_w4t8f" )
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visual" index="0"]
+position = Vector2(0, -52)
+frames = SubResource( "SpriteFrames_xrf4e" )
+playing = true
+
+[node name="Shadow" type="Sprite2D" parent="Visual" index="1"]
+modulate = Color(1, 1, 1, 0.384314)
+scale = Vector2(0.298658, 0.3)
+texture = ExtResource( "3_m8u5l" )
+
+[node name="MeleeWeapon" parent="Visual" index="2" instance=ExtResource( "7_g7bvv" )]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visual/MeleeWeapon" index="0"]
+shape = SubResource( "CircleShape2D_bk4cl" )
+
+[node name="Behavior" parent="." index="1"]
+script = ExtResource( "5_yqn2h" )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+shape = SubResource( "CircleShape2D_6gp4s" )

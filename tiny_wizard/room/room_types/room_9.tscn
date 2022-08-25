@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://qdyhlh75eu6m"]
+
+[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://demos/tiny_wizard/room/room.tscn" id="1_o627n"]
+[ext_resource type="PackedScene" uid="uid://ck7ptvnvveft" path="res://demos/tiny_wizard/enemies/black_fly/black_fly.tscn" id="2_htb2l"]
+[ext_resource type="Script" path="res://template_core/character/character_stats/character_stats.gd" id="3_opten"]
+[ext_resource type="PackedScene" path="res://demos/tiny_wizard/items/hearts/half_shield.tscn" id="4_1iy3s"]
+
+[sub_resource type="Resource" id="Resource_5kpmg"]
+resource_local_to_scene = true
+script = ExtResource( "3_opten" )
+max_life = 3
+
+[node name="Room" instance=ExtResource( "1_o627n" )]
+
+[node name="BlackFly" parent="Enemies" index="0" instance=ExtResource( "2_htb2l" )]
+position = Vector2(231, 305)
+character_stats = SubResource( "Resource_5kpmg" )
+
+[node name="TileMap" parent="." index="6"]
+layer_0/tile_data = PackedInt32Array(262151, 65536, 0, 262152, 196608, 0, 393219, 0, 3, 327683, 0, 1, 327684, 131072, 1, 393220, 131072, 3, 327691, 0, 1, 393227, 0, 3, 393228, 131072, 3, 327692, 131072, 1, 327686, 262144, 1, 327689, 262144, 1, 196614, 262144, 1, 196617, 262144, 1)
+
+[node name="HalfShield" parent="." index="7" instance=ExtResource( "4_1iy3s" )]
+position = Vector2(310, 242)

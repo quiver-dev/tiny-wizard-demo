@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://btijy130wqauo"]
+
+[ext_resource type="PackedScene" uid="uid://djs45wxhgd1ma" path="res://demos/tiny_wizard/items/default_items/default_item.tscn" id="1_aa2ce"]
+[ext_resource type="Texture2D" uid="uid://dcj5bv3fh0jfl" path="res://demos/tiny_wizard/assets/placeholder_art/VioletArrows.png" id="2_72d4i"]
+[ext_resource type="Resource" uid="uid://cewe5atrwbmch" path="res://demos/tiny_wizard/items/violet_arrow/violet_arrow.tres" id="2_hi8tp"]
+[ext_resource type="Script" path="res://template_core/items/pickable_items/pick_item_actions/use_item.gd" id="5_qf8us"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t72wp"]
+atlas = ExtResource( "2_72d4i" )
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a4x3i"]
+radius = 8.0
+
+[node name="VioletArrow" instance=ExtResource( "1_aa2ce" )]
+item = ExtResource( "2_hi8tp" )
+
+[node name="Item" parent="RigidDynamicBody2D" index="0"]
+position = Vector2(3, -15)
+y_sort_enabled = true
+texture = SubResource( "AtlasTexture_t72wp" )
+
+[node name="Shadow" parent="RigidDynamicBody2D" index="1"]
+position = Vector2(1, -1.67277)
+scale = Vector2(0.342105, 0.259598)
+
+[node name="CollisionShape2D" parent="RigidDynamicBody2D" index="2"]
+position = Vector2(0, -8)
+shape = SubResource( "CircleShape2D_a4x3i" )
+
+[node name="Action" parent="." index="1"]
+script = ExtResource( "5_qf8us" )

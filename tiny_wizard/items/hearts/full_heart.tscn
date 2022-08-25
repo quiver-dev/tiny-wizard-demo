@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://k0e5r0r012mk"]
+
+[ext_resource type="PackedScene" uid="uid://bv1ot60drqmx" path="res://demos/tiny_wizard/items/default_items/default_health_item.tscn" id="1_4vlia"]
+[ext_resource type="Texture2D" uid="uid://dvhaqxojlmcoj" path="res://demos/tiny_wizard/assets/placeholder_art/items/HeartFull.png" id="2_agnte"]
+[ext_resource type="Resource" uid="uid://02cbcdkekwct" path="res://demos/tiny_wizard/items/hearts/full_heart.tres" id="2_w24rq"]
+
+[node name="FullHeart" instance=ExtResource( "1_4vlia" )]
+item = ExtResource( "2_w24rq" )
+
+[node name="Item" parent="RigidDynamicBody2D" index="1"]
+texture = ExtResource( "2_agnte" )

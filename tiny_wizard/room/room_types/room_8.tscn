@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://7yddsgvc3t8j"]
+
+[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://demos/tiny_wizard/room/room.tscn" id="1_o627n"]
+[ext_resource type="PackedScene" uid="uid://ck7ptvnvveft" path="res://demos/tiny_wizard/enemies/black_fly/black_fly.tscn" id="2_htb2l"]
+[ext_resource type="Script" path="res://template_core/character/character_stats/character_stats.gd" id="3_opten"]
+
+[sub_resource type="Resource" id="Resource_5kpmg"]
+resource_local_to_scene = true
+script = ExtResource( "3_opten" )
+max_life = 3
+
+[sub_resource type="Resource" id="Resource_2cwfj"]
+resource_local_to_scene = true
+script = ExtResource( "3_opten" )
+max_life = 3
+
+[sub_resource type="Resource" id="Resource_unumj"]
+resource_local_to_scene = true
+script = ExtResource( "3_opten" )
+max_life = 3
+
+[sub_resource type="Resource" id="Resource_bnjyu"]
+resource_local_to_scene = true
+script = ExtResource( "3_opten" )
+max_life = 3
+
+[node name="Room" instance=ExtResource( "1_o627n" )]
+
+[node name="BlackFly" parent="Enemies" index="0" instance=ExtResource( "2_htb2l" )]
+position = Vector2(231, 305)
+character_stats = SubResource( "Resource_5kpmg" )
+
+[node name="BlackFly2" parent="Enemies" index="1" instance=ExtResource( "2_htb2l" )]
+position = Vector2(518, 216)
+character_stats = SubResource( "Resource_2cwfj" )
+
+[node name="BlackFly3" parent="Enemies" index="2" instance=ExtResource( "2_htb2l" )]
+position = Vector2(514, 419)
+character_stats = SubResource( "Resource_unumj" )
+
+[node name="BlackFly4" parent="Enemies" index="3" instance=ExtResource( "2_htb2l" )]
+position = Vector2(768, 298)
+character_stats = SubResource( "Resource_bnjyu" )
+
+[node name="BlackFly5" parent="Enemies" index="4" instance=ExtResource( "2_htb2l" )]
+position = Vector2(441, 308)
+character_stats = SubResource( "Resource_bnjyu" )
+
+[node name="BlackFly6" parent="Enemies" index="5" instance=ExtResource( "2_htb2l" )]
+position = Vector2(603, 304)
+character_stats = SubResource( "Resource_bnjyu" )
+
+[node name="TileMap" parent="." index="6"]
+layer_0/tile_data = PackedInt32Array(196609, 262144, 1, 327681, 262144, 1, 65542, 262144, 1, 196622, 262144, 1, 327694, 262144, 1, 65545, 262144, 1, 458761, 262144, 1, 262151, 131072, 0, 262152, 131072, 0, 262149, 65536, 0, 262150, 65536, 2, 327686, 196608, 3, 196614, 196608, 1, 262153, 65536, 2, 262154, 196608, 0, 196617, 196608, 1, 327689, 196608, 3, 458758, 262144, 1)

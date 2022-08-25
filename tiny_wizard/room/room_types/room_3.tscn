@@ -1,0 +1,22 @@
+[gd_scene load_steps=8 format=3 uid="uid://clrh7n7dsc2nj"]
+
+[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://demos/tiny_wizard/room/room.tscn" id="1_43kv8"]
+[ext_resource type="PackedScene" uid="uid://bu83qkq8qqvg6" path="res://demos/tiny_wizard/interactable_objects/chests/chest.tscn" id="2_tyont"]
+[ext_resource type="Resource" uid="uid://6d63alr8jx35" path="res://demos/tiny_wizard/items/coin/coin.tres" id="3_1krdd"]
+[ext_resource type="PackedScene" path="res://demos/tiny_wizard/items/hearts/half_heart.tscn" id="3_vpvpb"]
+[ext_resource type="PackedScene" uid="uid://o3yevur5onpt" path="res://demos/tiny_wizard/interactable_objects/chests/locked_chest.tscn" id="4_bwbuu"]
+[ext_resource type="Resource" uid="uid://dns8t84rxp4x5" path="res://demos/tiny_wizard/items/pickable_bomb/bomb.tres" id="5_uwgop"]
+[ext_resource type="Resource" uid="uid://bqy1wutr06tk8" path="res://demos/tiny_wizard/items/hearts/half_shield.tres" id="7_1cdyb"]
+
+[node name="Room" instance=ExtResource( "1_43kv8" )]
+
+[node name="TileMap" parent="." index="6"]
+layer_0/tile_data = PackedInt32Array(196616, 262144, 1, 196613, 0, 1, 262149, 196608, 2, 327685, 0, 3, 327686, 196608, 0, 196614, 196608, 0, 196617, 65536, 0, 327689, 65536, 0, 327688, 262144, 1, 327687, 262144, 1, 196615, 262144, 1, 196618, 131072, 1, 262154, 196608, 2, 327690, 131072, 3)
+
+[node name="Chest" parent="." index="7" instance=ExtResource( "2_tyont" )]
+position = Vector2(416, 314)
+items = [ExtResource( "3_1krdd" ), ExtResource( "3_vpvpb" )]
+
+[node name="Chest2" parent="." index="8" instance=ExtResource( "4_bwbuu" )]
+position = Vector2(604, 320)
+items = [ExtResource( "3_1krdd" ), ExtResource( "5_uwgop" ), ExtResource( "7_1cdyb" )]

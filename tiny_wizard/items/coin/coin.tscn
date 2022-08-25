@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=3 uid="uid://buoxd7m1hsnru"]
+
+[ext_resource type="PackedScene" uid="uid://23m7r5q686kd" path="res://demos/tiny_wizard/items/default_items/default_add_to_inventory_item.tscn" id="1_cwhcf"]
+[ext_resource type="Resource" uid="uid://6d63alr8jx35" path="res://demos/tiny_wizard/items/coin/coin.tres" id="2_7pv83"]
+[ext_resource type="Texture2D" uid="uid://b2r5s5tmvnlt2" path="res://demos/tiny_wizard/assets/placeholder_art/items/Coin.png" id="2_p00h8"]
+[ext_resource type="AnimationLibrary" uid="uid://04e7u2gpyy16" path="res://demos/tiny_wizard/interactable_objects/objects_anim_lib.tres" id="4_0aogv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7afo6"]
+radius = 10.0499
+
+[sub_resource type="Animation" id="Animation_32cud"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RigidDynamicBody2D/Item:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xtw0f"]
+resource_name = "bump"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RigidDynamicBody2D/Item:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d2gsa"]
+_data = {
+"RESET": SubResource( "Animation_32cud" ),
+"bump": SubResource( "Animation_xtw0f" )
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cdgy0"]
+
+[node name="Coin" instance=ExtResource( "1_cwhcf" )]
+item = ExtResource( "2_7pv83" )
+
+[node name="CollisionShape2D" parent="RigidDynamicBody2D" index="0"]
+shape = SubResource( "CircleShape2D_7afo6" )
+
+[node name="Item" parent="RigidDynamicBody2D" index="1"]
+position = Vector2(1, -1)
+texture = ExtResource( "2_p00h8" )
+offset = Vector2(2, -5)
+
+[node name="OnFailure" parent="Action" index="1"]
+script = null
+
+[node name="AnimationPlayer" parent="." index="3"]
+libraries = {
+"": SubResource( "AnimationLibrary_d2gsa" ),
+"Item": SubResource( "AnimationLibrary_cdgy0" ),
+"objects_anim_lib": ExtResource( "4_0aogv" )
+}

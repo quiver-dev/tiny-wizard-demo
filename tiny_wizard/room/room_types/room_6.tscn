@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://bog1ldcsq4qxe"]
+
+[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://demos/tiny_wizard/room/room.tscn" id="1_43kv8"]
+[ext_resource type="PackedScene" uid="uid://bu83qkq8qqvg6" path="res://demos/tiny_wizard/interactable_objects/chests/chest.tscn" id="3_rxhyj"]
+[ext_resource type="Resource" uid="uid://6d63alr8jx35" path="res://demos/tiny_wizard/items/coin/coin.tres" id="3_u0lwx"]
+[ext_resource type="Resource" uid="uid://ca80nqtdifi7q" path="res://demos/tiny_wizard/items/key/key.tres" id="4_sp77y"]
+
+[node name="Room" instance=ExtResource( "1_43kv8" )]
+
+[node name="TileMap" parent="." index="6"]
+layer_0/tile_data = PackedInt32Array(196611, 131072, 3, 131075, 131072, 1, 131074, 0, 1, 196610, 0, 3, 327682, 0, 1, 393218, 0, 3, 393219, 131072, 3, 327683, 131072, 1, 196614, 196608, 1, 262150, 196608, 2, 327686, 196608, 3, 196617, 196608, 1, 262153, 196608, 2, 327689, 196608, 3, 131084, 0, 1, 196620, 0, 3, 196621, 131072, 3, 131085, 131072, 1, 327692, 0, 1, 393228, 0, 3, 393229, 131072, 3, 327693, 131072, 1)
+
+[node name="Chest" parent="." index="7" instance=ExtResource( "3_rxhyj" )]
+position = Vector2(503, 323)
+items = [ExtResource( "3_u0lwx" ), ExtResource( "4_sp77y" )]

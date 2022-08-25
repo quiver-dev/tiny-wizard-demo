@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://demos/tiny_wizard/gui/life_ui/hearts_ui.gd" id="1_tvc6f"]
+
+[node name="HeartsUI" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -997.0
+offset_bottom = -574.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource( "1_tvc6f" )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 27.0
+offset_bottom = 226.0
+
+[node name="HeartContainer" type="HBoxContainer" parent="HBoxContainer"]
+offset_bottom = 226.0
+
+[node name="ShieldContainer" type="HBoxContainer" parent="HBoxContainer"]
+offset_left = 4.0
+offset_right = 4.0
+offset_bottom = 226.0

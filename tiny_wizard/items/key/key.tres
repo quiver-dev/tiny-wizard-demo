@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ca80nqtdifi7q"]
+
+[ext_resource type="Script" path="res://template_core/items/item.gd" id="1_3uhtu"]
+
+[resource]
+script = ExtResource( "1_3uhtu" )
+name = "Key"
+short_description = "A key to open things"
+long_description = null
+stackable = true
+stack_size = null
+pickable_item_scene = "res://demos/tiny_wizard/items/key/key.tscn"

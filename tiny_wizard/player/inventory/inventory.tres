@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bpvgw7v25bbsx"]
+
+[ext_resource type="Script" path="res://template_core/inventory/inventory_.gd" id="1_kcdp7"]
+
+[resource]
+script = ExtResource( "1_kcdp7" )
+max_size = 9

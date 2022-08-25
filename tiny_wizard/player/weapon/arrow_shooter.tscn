@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://template_core/weapons/distance_weapon.tscn" id="1_0ty35"]
+[ext_resource type="PackedScene" path="res://demos/tiny_wizard/player/weapon/bullet/arrow.tscn" id="2_kki1l"]
+
+[node name="DistanceWeapon" instance=ExtResource( "1_0ty35" )]
+shoot_delay = 0.4
+bullet_scene = ExtResource( "2_kki1l" )

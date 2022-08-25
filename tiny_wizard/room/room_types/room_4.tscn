@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://buq05y654f2am"]
+
+[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://demos/tiny_wizard/room/room.tscn" id="1_43kv8"]
+[ext_resource type="PackedScene" uid="uid://btijy130wqauo" path="res://demos/tiny_wizard/items/violet_arrow/violet_arrow.tscn" id="2_6ynv7"]
+
+[node name="Room" instance=ExtResource( "1_43kv8" )]
+
+[node name="TileMap" parent="." index="6"]
+layer_0/tile_data = PackedInt32Array(196616, 262144, 1, 196613, 0, 1, 262149, 0, 2, 327685, 0, 3, 327686, 65536, 3, 196614, 131072, 1, 196617, 0, 1, 327689, 65536, 3, 196615, 262144, 1, 196618, 131072, 1, 262154, 131072, 2, 327690, 131072, 3, 327687, 131072, 0, 327688, 131072, 0, 262150, 131072, 2, 262153, 0, 2, 131079, 262144, 1, 131080, 262144, 1)
+
+[node name="VioletArrow" parent="." index="7" instance=ExtResource( "2_6ynv7" )]
+position = Vector2(508, 316)
