@@ -1,0 +1,127 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+_global_script_classes=[{
+"base": "RigidDynamicBody2D",
+"class": &"QuiverBullet",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/bullets/bullet.gd"
+}, {
+"base": "CharacterBody2D",
+"class": &"QuiverCharacter",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/character/character.gd"
+}, {
+"base": "Object",
+"class": &"QuiverCharacterAction",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/character/character_action.gd"
+}, {
+"base": "Node2D",
+"class": &"QuiverCharacterBehavior",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/character/behavior/behavior.gd"
+}, {
+"base": "Resource",
+"class": &"QuiverCharacterStats",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/character/character_stats/character_stats.gd"
+}, {
+"base": "Node2D",
+"class": &"QuiverCharacterVisual",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/character/visual/visual.gd"
+}, {
+"base": "Node2D",
+"class": &"QuiverInteractMechanic",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/interactable_objects/interact_mechanics/_interact_mechanic.gd"
+}, {
+"base": "Node2D",
+"class": &"QuiverInteractableObject",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/interactable_objects/interactable_object.gd"
+}, {
+"base": "Node2D",
+"class": &"QuiverInteractableObjectAction",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/interactable_objects/actions/_action.gd"
+}, {
+"base": "Resource",
+"class": &"QuiverInventory",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/inventory/inventory_.gd"
+}, {
+"base": "Resource",
+"class": &"QuiverItem",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/items/item.gd"
+}, {
+"base": "Resource",
+"class": &"QuiverItemUseAction",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/items/use_actions/_use_action.gd"
+}, {
+"base": "QuiverItemUseAction",
+"class": &"QuiverItemUseActionEquipBullet",
+"language": &"GDScript",
+"path": "res://tiny_wizard/items/violet_arrow/equip_bullet.gd"
+}, {
+"base": "QuiverItemUseAction",
+"class": &"QuiverItemUseActionHealCharacter",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/items/use_actions/heal_character.gd"
+}, {
+"base": "QuiverItemUseAction",
+"class": &"QuiverItemUseSpawnAScene",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/items/use_actions/spawn_a_scene.gd"
+}, {
+"base": "Resource",
+"class": &"QuiverMagazine",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/weapons/magazine.gd"
+}, {
+"base": "QuiverInteractableObjectAction",
+"class": &"QuiverPickItemAction",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/items/pickable_items/pick_item_actions/_pick_item_action.gd"
+}, {
+"base": "QuiverInteractableObject",
+"class": &"QuiverPickableItem",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/items/pickable_items/pickable_item.gd"
+}]
+_global_script_class_icons={
+"QuiverBullet": "",
+"QuiverCharacter": "",
+"QuiverCharacterAction": "",
+"QuiverCharacterBehavior": "",
+"QuiverCharacterStats": "",
+"QuiverCharacterVisual": "",
+"QuiverInteractMechanic": "",
+"QuiverInteractableObject": "",
+"QuiverInteractableObjectAction": "",
+"QuiverInventory": "",
+"QuiverItem": "",
+"QuiverItemUseAction": "",
+"QuiverItemUseActionEquipBullet": "",
+"QuiverItemUseActionHealCharacter": "",
+"QuiverItemUseSpawnAScene": "",
+"QuiverMagazine": "",
+"QuiverPickItemAction": "",
+"QuiverPickableItem": ""
+}
+
+[application]
+
+config/name="tiny-wizard-demo"
+config/features=PackedStringArray("4.0", "Vulkan Clustered")
+config/icon="res://icon.png"
