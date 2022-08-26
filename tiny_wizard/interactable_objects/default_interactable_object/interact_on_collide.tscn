@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://c3bp3q2valq35"]
 
-[ext_resource type="PackedScene" uid="uid://bkc8i2tfohtub" path="res://template_core/interactable_objects/interactable_object.tscn" id="1_h53o5"]
-[ext_resource type="Script" path="res://template_core/interactable_objects/actions/play_animation.gd" id="2_1ayrx"]
-[ext_resource type="Script" path="res://template_core/interactable_objects/interact_mechanics/interact_on_collide.gd" id="2_ykpmf"]
+[ext_resource type="PackedScene" uid="uid://bkc8i2tfohtub" path="res://top-down-shooter-core/interactable_objects/interactable_object.tscn" id="1_h53o5"]
+[ext_resource type="Script" path="res://top-down-shooter-core/interactable_objects/actions/play_animation.gd" id="2_1ayrx"]
+[ext_resource type="Script" path="res://top-down-shooter-core/interactable_objects/interact_mechanics/interact_on_collide.gd" id="2_ykpmf"]
 [ext_resource type="AnimationLibrary" uid="uid://04e7u2gpyy16" path="res://demos/tiny_wizard/interactable_objects/objects_anim_lib.tres" id="3_nqbdb"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3dhe5"]

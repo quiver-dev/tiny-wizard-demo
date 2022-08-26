@@ -1,4 +1,4 @@
-extends "res://template_core/gui/player_ui/player_ui.gd"
+extends "res://top-down-shooter-core/gui/player_ui/player_ui.gd"
 
 const HEART_SCENE = preload("res://demos/tiny_wizard/gui/life_ui/heart/heart.tscn")
 

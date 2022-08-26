@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://dpewqvfo4hw0f"]
 
-[ext_resource type="Script" path="res://template_core/items/item.gd" id="1_uckqt"]
-[ext_resource type="Script" path="res://template_core/items/use_actions/heal_character.gd" id="2_axfyc"]
+[ext_resource type="Script" path="res://top-down-shooter-core/items/item.gd" id="1_uckqt"]
+[ext_resource type="Script" path="res://top-down-shooter-core/items/use_actions/heal_character.gd" id="2_axfyc"]
 
 [sub_resource type="Resource" id="Resource_mr1x2"]
 script = ExtResource( "2_axfyc" )

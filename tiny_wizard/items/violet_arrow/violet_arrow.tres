@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=5 format=3 uid="uid://cewe5atrwbmch"]
 
-[ext_resource type="Script" path="res://template_core/items/item.gd" id="1_20jho"]
+[ext_resource type="Script" path="res://top-down-shooter-core/items/item.gd" id="1_20jho"]
 [ext_resource type="PackedScene" uid="uid://ctyodhlo6n01w" path="res://demos/tiny_wizard/player/weapon/bullet/violet_arrow.tscn" id="2_53cof"]
 [ext_resource type="Script" path="res://demos/tiny_wizard/items/violet_arrow/equip_bullet.gd" id="3_etyt0"]
 

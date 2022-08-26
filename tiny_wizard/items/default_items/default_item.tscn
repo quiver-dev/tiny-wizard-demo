@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://djs45wxhgd1ma"]
 
-[ext_resource type="PackedScene" uid="uid://d1wr7q5evnxmw" path="res://template_core/items/pickable_items/pickable_item.tscn" id="1_tuxjg"]
-[ext_resource type="Script" path="res://template_core/interactable_objects/interact_mechanics/interact_on_collide.gd" id="2_w8b4r"]
+[ext_resource type="PackedScene" uid="uid://d1wr7q5evnxmw" path="res://top-down-shooter-core/items/pickable_items/pickable_item.tscn" id="1_tuxjg"]
+[ext_resource type="Script" path="res://top-down-shooter-core/interactable_objects/interact_mechanics/interact_on_collide.gd" id="2_w8b4r"]
 [ext_resource type="Texture2D" uid="uid://07bwu3183fl" path="res://demos/tiny_wizard/assets/placeholder_art/Shadow.png" id="2_wkavh"]
 [ext_resource type="AnimationLibrary" uid="uid://04e7u2gpyy16" path="res://demos/tiny_wizard/interactable_objects/objects_anim_lib.tres" id="3_kwbxb"]
-[ext_resource type="Script" path="res://template_core/interactable_objects/actions/destroy_object.gd" id="3_x7lgx"]
-[ext_resource type="Script" path="res://template_core/interactable_objects/actions/play_animation.gd" id="4_qjjgh"]
+[ext_resource type="Script" path="res://top-down-shooter-core/interactable_objects/actions/destroy_object.gd" id="3_x7lgx"]
+[ext_resource type="Script" path="res://top-down-shooter-core/interactable_objects/actions/play_animation.gd" id="4_qjjgh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3dfhm"]
 friction = 100.0

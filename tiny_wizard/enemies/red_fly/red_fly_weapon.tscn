@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3]
 
-[ext_resource type="PackedScene" path="res://template_core/weapons/melee_weapon.tscn" id="1_n8l2s"]
+[ext_resource type="PackedScene" path="res://top-down-shooter-core/weapons/melee_weapon.tscn" id="1_n8l2s"]
 
 [node name="MeleeWeapon" instance=ExtResource( "1_n8l2s" )]
 collision_mask = 2

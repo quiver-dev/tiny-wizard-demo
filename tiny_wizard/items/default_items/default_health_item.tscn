@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://djs45wxhgd1ma" path="res://demos/tiny_wizard/items/default_items/default_item.tscn" id="1_ieg5c"]
 [ext_resource type="Resource" uid="uid://b6lwohkppiocx" path="res://demos/tiny_wizard/items/default_items/heart.tres" id="2_ere8g"]
-[ext_resource type="Script" path="res://template_core/items/pickable_items/pick_item_actions/use_item.gd" id="3_7x3s4"]
+[ext_resource type="Script" path="res://top-down-shooter-core/items/pickable_items/pick_item_actions/use_item.gd" id="3_7x3s4"]
 
 [node name="DefaultHealthItem" instance=ExtResource( "1_ieg5c" )]
 item = ExtResource( "2_ere8g" )
