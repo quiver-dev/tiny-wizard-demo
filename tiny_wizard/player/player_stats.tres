@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://demos/tiny_wizard/player/player_stats.gd" id="1_fpjwe"]
+[ext_resource type="Script" path="res://tiny_wizard/player/player_stats.gd" id="1_fpjwe"]
 
 [resource]
 script = ExtResource( "1_fpjwe" )

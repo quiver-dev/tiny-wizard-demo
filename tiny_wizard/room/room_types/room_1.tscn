@@ -1,34 +1,34 @@
 [gd_scene load_steps=8 format=3 uid="uid://d01c1dqufo578"]
 
-[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://demos/tiny_wizard/room/room.tscn" id="1_o627n"]
-[ext_resource type="PackedScene" uid="uid://ck7ptvnvveft" path="res://demos/tiny_wizard/enemies/black_fly/black_fly.tscn" id="2_htb2l"]
+[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://tiny_wizard/room/room.tscn" id="1_o627n"]
+[ext_resource type="PackedScene" uid="uid://ck7ptvnvveft" path="res://tiny_wizard/enemies/black_fly/black_fly.tscn" id="2_htb2l"]
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/character_stats.gd" id="3_opten"]
-[ext_resource type="PackedScene" uid="uid://dbgrx8pumpt3n" path="res://demos/tiny_wizard/enemies/red_fly/red_fly.tscn" id="4_5fybu"]
+[ext_resource type="PackedScene" uid="uid://dbgrx8pumpt3n" path="res://tiny_wizard/enemies/red_fly/red_fly.tscn" id="4_5fybu"]
 
 [sub_resource type="Resource" id="Resource_pm8y8"]
 resource_local_to_scene = true
-script = ExtResource( "3_opten" )
+script = ExtResource("3_opten")
 max_life = 3
 
 [sub_resource type="Resource" id="Resource_i5vyh"]
 resource_local_to_scene = true
-script = ExtResource( "3_opten" )
+script = ExtResource("3_opten")
 max_life = 3
 
 [sub_resource type="Resource" id="Resource_qt1ii"]
-script = ExtResource( "3_opten" )
+script = ExtResource("3_opten")
 max_life = 3
 
-[node name="Room" instance=ExtResource( "1_o627n" )]
+[node name="Room" instance=ExtResource("1_o627n")]
 
-[node name="BlackFly" parent="Enemies" index="0" instance=ExtResource( "2_htb2l" )]
+[node name="BlackFly" parent="Enemies" index="0" instance=ExtResource("2_htb2l")]
 position = Vector2(680, 232)
-character_stats = SubResource( "Resource_pm8y8" )
+character_stats = SubResource("Resource_pm8y8")
 
-[node name="BlackFly2" parent="Enemies" index="1" instance=ExtResource( "2_htb2l" )]
+[node name="BlackFly2" parent="Enemies" index="1" instance=ExtResource("2_htb2l")]
 position = Vector2(736, 296)
-character_stats = SubResource( "Resource_i5vyh" )
+character_stats = SubResource("Resource_i5vyh")
 
-[node name="RedFly" parent="Enemies" index="2" instance=ExtResource( "4_5fybu" )]
+[node name="RedFly" parent="Enemies" index="2" instance=ExtResource("4_5fybu")]
 position = Vector2(792, 328)
-character_stats = SubResource( "Resource_qt1ii" )
+character_stats = SubResource("Resource_qt1ii")

@@ -1,40 +1,32 @@
-[gd_scene load_steps=9 format=3 uid="uid://bu83qkq8qqvg6"]
+[gd_scene load_steps=8 format=3 uid="uid://bu83qkq8qqvg6"]
 
-[ext_resource type="PackedScene" uid="uid://c3bp3q2valq35" path="res://demos/tiny_wizard/interactable_objects/default_interactable_object/interact_on_collide.tscn" id="1_1y646"]
-[ext_resource type="Script" path="res://demos/tiny_wizard/interactable_objects/chests/chest.gd" id="2_lsfc8"]
-[ext_resource type="Texture2D" uid="uid://byvomou71f68c" path="res://demos/tiny_wizard/assets/placeholder_art/Chests/NormalChestClosed.png" id="2_vceo6"]
-[ext_resource type="Script" path="res://demos/tiny_wizard/interactable_objects/chests/chest_sprite.gd" id="3_ne01s"]
-[ext_resource type="Script" path="res://demos/tiny_wizard/interactable_objects/chests/open_chest.gd" id="4_3i1hb"]
-[ext_resource type="Texture2D" uid="uid://dkt35lhcjtyh4" path="res://demos/tiny_wizard/assets/placeholder_art/Chests/NormalChestOpen.png" id="4_xgyxs"]
-[ext_resource type="Texture2D" uid="uid://07bwu3183fl" path="res://demos/tiny_wizard/assets/placeholder_art/Shadow.png" id="5_7l7pb"]
+[ext_resource type="PackedScene" uid="uid://c3bp3q2valq35" path="res://tiny_wizard/interactable_objects/default_interactable_object/interact_on_collide.tscn" id="1_1y646"]
+[ext_resource type="Script" path="res://tiny_wizard/interactable_objects/chests/chest.gd" id="2_lsfc8"]
+[ext_resource type="Texture2D" uid="uid://dd6o12i48bmi8" path="res://tiny_wizard/assets/placeholder_art/chests/normal_chest_closed.png" id="3_l3g5r"]
+[ext_resource type="Script" path="res://tiny_wizard/interactable_objects/chests/chest_sprite.gd" id="3_ne01s"]
+[ext_resource type="Script" path="res://tiny_wizard/interactable_objects/chests/open_chest.gd" id="4_3i1hb"]
+[ext_resource type="Texture2D" uid="uid://cjvydgvagjnlo" path="res://tiny_wizard/assets/placeholder_art/chests/normal_chest_open.png" id="5_6k8xq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yy5pk"]
 radius = 16.0
 
-[node name="Chest" instance=ExtResource( "1_1y646" )]
-script = ExtResource( "2_lsfc8" )
+[node name="Chest" instance=ExtResource("1_1y646")]
+script = ExtResource("2_lsfc8")
 items = null
 metadata/items = []
 
 [node name="Object" parent="RigidDynamicBody2D" index="0"]
-position = Vector2(0, -1)
-y_sort_enabled = true
-texture = ExtResource( "2_vceo6" )
-offset = Vector2(3, -20)
-script = ExtResource( "3_ne01s" )
-open_texture = ExtResource( "4_xgyxs" )
-
-[node name="Shadow" type="Sprite2D" parent="RigidDynamicBody2D" index="1"]
-modulate = Color(1, 1, 1, 0.6)
-position = Vector2(3, -6)
-scale = Vector2(0.671053, 0.555556)
+position = Vector2(2, -21)
 z_index = -1
-texture = ExtResource( "5_7l7pb" )
+y_sort_enabled = true
+texture = ExtResource("3_l3g5r")
+script = ExtResource("3_ne01s")
+open_texture = ExtResource("5_6k8xq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidDynamicBody2D" index="2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidDynamicBody2D" index="1"]
 position = Vector2(1, -17)
-shape = SubResource( "CircleShape2D_yy5pk" )
+shape = SubResource("CircleShape2D_yy5pk")
 
 [node name="Action" parent="." index="1"]
-script = ExtResource( "4_3i1hb" )
+script = ExtResource("4_3i1hb")
 chest_sprite = NodePath("../RigidDynamicBody2D/Object")

@@ -9,4 +9,4 @@ short_description = "A key to open things"
 long_description = null
 stackable = true
 stack_size = null
-pickable_item_scene = "res://demos/tiny_wizard/items/key/key.tscn"
+pickable_item_scene = "res://tiny_wizard/items/key/key.tscn"

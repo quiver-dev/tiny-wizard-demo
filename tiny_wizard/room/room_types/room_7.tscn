@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bs2vw66dejdbp"]
 
-[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://demos/tiny_wizard/room/room.tscn" id="1_43kv8"]
-[ext_resource type="PackedScene" uid="uid://dbgrx8pumpt3n" path="res://demos/tiny_wizard/enemies/red_fly/red_fly.tscn" id="2_e0ixt"]
+[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://tiny_wizard/room/room.tscn" id="1_43kv8"]
+[ext_resource type="PackedScene" uid="uid://dbgrx8pumpt3n" path="res://tiny_wizard/enemies/red_fly/red_fly.tscn" id="2_e0ixt"]
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/character_stats.gd" id="3_bk2rq"]
 
 [sub_resource type="Resource" id="Resource_vkqm6"]

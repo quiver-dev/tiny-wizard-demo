@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://xp8r02l2aycc"]
 
-[ext_resource type="PackedScene" uid="uid://bv1ot60drqmx" path="res://demos/tiny_wizard/items/default_items/default_health_item.tscn" id="1_shcai"]
-[ext_resource type="Resource" uid="uid://dpewqvfo4hw0f" path="res://demos/tiny_wizard/items/hearts/full_shield.tres" id="2_5cres"]
-[ext_resource type="Texture2D" uid="uid://c25vbqgke5vva" path="res://demos/tiny_wizard/assets/placeholder_art/items/ShieldFull.png" id="4_bu4be"]
+[ext_resource type="PackedScene" uid="uid://bv1ot60drqmx" path="res://tiny_wizard/items/default_items/default_health_item.tscn" id="1_shcai"]
+[ext_resource type="Resource" uid="uid://dpewqvfo4hw0f" path="res://tiny_wizard/items/hearts/full_shield.tres" id="2_5cres"]
+[ext_resource type="Texture2D" uid="uid://duvklaip1ycrp" path="res://tiny_wizard/assets/placeholder_art/items/shield_full.png" id="3_faysd"]
 
-[node name="FullShield" instance=ExtResource( "1_shcai" )]
-item = ExtResource( "2_5cres" )
+[node name="FullShield" instance=ExtResource("1_shcai")]
+item = ExtResource("2_5cres")
 
 [node name="Item" parent="RigidDynamicBody2D" index="1"]
-texture = ExtResource( "4_bu4be" )
+texture = ExtResource("3_faysd")

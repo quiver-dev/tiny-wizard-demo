@@ -1,6 +1,6 @@
 extends "res://top-down-shooter-core/gui/player_ui/player_ui.gd"
 
-const HEART_SCENE = preload("res://demos/tiny_wizard/gui/life_ui/heart/heart.tscn")
+const HEART_SCENE = preload("res://tiny_wizard/gui/life_ui/heart/heart.tscn")
 
 var max_life := 0
 

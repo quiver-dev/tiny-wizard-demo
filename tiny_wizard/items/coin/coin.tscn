@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://buoxd7m1hsnru"]
 
-[ext_resource type="PackedScene" uid="uid://23m7r5q686kd" path="res://demos/tiny_wizard/items/default_items/default_add_to_inventory_item.tscn" id="1_cwhcf"]
-[ext_resource type="Resource" uid="uid://6d63alr8jx35" path="res://demos/tiny_wizard/items/coin/coin.tres" id="2_7pv83"]
-[ext_resource type="Texture2D" uid="uid://b2r5s5tmvnlt2" path="res://demos/tiny_wizard/assets/placeholder_art/items/Coin.png" id="2_p00h8"]
-[ext_resource type="AnimationLibrary" uid="uid://04e7u2gpyy16" path="res://demos/tiny_wizard/interactable_objects/objects_anim_lib.tres" id="4_0aogv"]
+[ext_resource type="PackedScene" uid="uid://23m7r5q686kd" path="res://tiny_wizard/items/default_items/default_add_to_inventory_item.tscn" id="1_cwhcf"]
+[ext_resource type="Resource" uid="uid://6d63alr8jx35" path="res://tiny_wizard/items/coin/coin.tres" id="2_7pv83"]
+[ext_resource type="Texture2D" uid="uid://b2r5s5tmvnlt2" path="res://tiny_wizard/assets/placeholder_art/items/Coin.png" id="2_p00h8"]
+[ext_resource type="AnimationLibrary" uid="uid://04e7u2gpyy16" path="res://tiny_wizard/interactable_objects/objects_anim_lib.tres" id="4_0aogv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7afo6"]
 radius = 10.0499

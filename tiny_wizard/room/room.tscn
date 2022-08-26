@@ -1,12 +1,12 @@
 [gd_scene load_steps=18 format=3 uid="uid://de3l1l1odllgl"]
 
-[ext_resource type="Texture2D" uid="uid://bryitgy6jmbvf" path="res://demos/tiny_wizard/assets/placeholder_art/Room.png" id="1_gcfa5"]
-[ext_resource type="Texture2D" uid="uid://c4qwhq7qasx2d" path="res://demos/tiny_wizard/assets/placeholder_art/Doors/DownDoor.png" id="2_e7uf5"]
-[ext_resource type="Script" path="res://demos/tiny_wizard/room/room.gd" id="2_xgkvw"]
-[ext_resource type="Texture2D" uid="uid://dhvdkcg3fscqo" path="res://demos/tiny_wizard/assets/placeholder_art/Doors/LeftDoor.png" id="3_0mrgv"]
-[ext_resource type="Texture2D" uid="uid://dg32b6qtvrqj0" path="res://demos/tiny_wizard/assets/placeholder_art/Doors/RightDoor.png" id="4_2wnvf"]
-[ext_resource type="Texture2D" uid="uid://dj68yvghjrbcg" path="res://demos/tiny_wizard/assets/placeholder_art/Doors/UpDoor.png" id="5_3b5w2"]
-[ext_resource type="Texture2D" uid="uid://chaegwogdec16" path="res://demos/tiny_wizard/assets/placeholder_art/hole_tileset.png" id="7_j8rd3"]
+[ext_resource type="Texture2D" path="res://tiny_wizard/assets/placeholder_art/Room.png" id="1_gcfa5"]
+[ext_resource type="Texture2D" uid="uid://cagcc38r16kd3" path="res://tiny_wizard/assets/placeholder_art/Doors/down_door.png" id="2_e7uf5"]
+[ext_resource type="Script" path="res://tiny_wizard/room/room.gd" id="2_xgkvw"]
+[ext_resource type="Texture2D" uid="uid://b64fuo1ncowc4" path="res://tiny_wizard/assets/placeholder_art/Doors/left_door.png" id="3_0mrgv"]
+[ext_resource type="Texture2D" uid="uid://djtha5cwuj2g" path="res://tiny_wizard/assets/placeholder_art/Doors/right_door.png" id="4_2wnvf"]
+[ext_resource type="Texture2D" uid="uid://b54wion82dhwh" path="res://tiny_wizard/assets/placeholder_art/Doors/up_door.png" id="5_3b5w2"]
+[ext_resource type="Texture2D" uid="uid://cq53yvea130jy" path="res://tiny_wizard/assets/placeholder_art/hole_tileset.png" id="7_j8rd3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5api5"]
 size = Vector2(80, 8)
@@ -33,7 +33,7 @@ size = Vector2(72, 8)
 size = Vector2(72, 24)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fjj7s"]
-texture = ExtResource( "7_j8rd3" )
+texture = ExtResource("7_j8rd3")
 texture_region_size = Vector2i(63, 63)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -216,21 +216,21 @@ physics_layer_1/collision_mask = 0
 terrain_set_0/mode = 2
 terrain_set_0/terrain_0/name = "Holes"
 terrain_set_0/terrain_0/color = Color(0.501961, 0.345098, 0.25098, 1)
-sources/0 = SubResource( "TileSetAtlasSource_fjj7s" )
+sources/0 = SubResource("TileSetAtlasSource_fjj7s")
 
 [node name="Room" type="Node2D"]
 position = Vector2(0, 200)
 y_sort_enabled = true
-script = ExtResource( "2_xgkvw" )
+script = ExtResource("2_xgkvw")
 
 [node name="RoomWalls" type="Sprite2D" parent="."]
 z_index = -3
-texture = ExtResource( "1_gcfa5" )
+texture = ExtResource("1_gcfa5")
 centered = false
 
 [node name="DownDoor" type="Sprite2D" parent="RoomWalls"]
 position = Vector2(512, 557)
-texture = ExtResource( "2_e7uf5" )
+texture = ExtResource("2_e7uf5")
 
 [node name="Area2D" type="Area2D" parent="RoomWalls/DownDoor"]
 collision_layer = 0
@@ -238,7 +238,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoomWalls/DownDoor/Area2D"]
 position = Vector2(0, -17)
-shape = SubResource( "RectangleShape2D_5api5" )
+shape = SubResource("RectangleShape2D_5api5")
 
 [node name="Locker" type="StaticBody2D" parent="RoomWalls/DownDoor"]
 position = Vector2(0, -13)
@@ -247,11 +247,11 @@ collision_mask = 15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoomWalls/DownDoor/Locker"]
 position = Vector2(0, -12)
-shape = SubResource( "RectangleShape2D_inhan" )
+shape = SubResource("RectangleShape2D_inhan")
 
 [node name="LeftDoor" type="Sprite2D" parent="RoomWalls"]
 position = Vector2(48, 280)
-texture = ExtResource( "3_0mrgv" )
+texture = ExtResource("3_0mrgv")
 
 [node name="Area2D" type="Area2D" parent="RoomWalls/LeftDoor"]
 collision_layer = 0
@@ -259,18 +259,18 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoomWalls/LeftDoor/Area2D"]
 position = Vector2(-4, 0)
-shape = SubResource( "RectangleShape2D_3wuee" )
+shape = SubResource("RectangleShape2D_3wuee")
 
 [node name="Locker" type="StaticBody2D" parent="RoomWalls/LeftDoor"]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoomWalls/LeftDoor/Locker"]
 position = Vector2(4, 0)
-shape = SubResource( "RectangleShape2D_wvr3b" )
+shape = SubResource("RectangleShape2D_wvr3b")
 
 [node name="RightDoor" type="Sprite2D" parent="RoomWalls"]
 position = Vector2(979, 280)
-texture = ExtResource( "4_2wnvf" )
+texture = ExtResource("4_2wnvf")
 
 [node name="Area2D" type="Area2D" parent="RoomWalls/RightDoor"]
 collision_layer = 0
@@ -278,18 +278,18 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoomWalls/RightDoor/Area2D"]
 position = Vector2(1, 0)
-shape = SubResource( "RectangleShape2D_a7l46" )
+shape = SubResource("RectangleShape2D_a7l46")
 
 [node name="Locker" type="StaticBody2D" parent="RoomWalls/RightDoor"]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoomWalls/RightDoor/Locker"]
 position = Vector2(-7, 0)
-shape = SubResource( "RectangleShape2D_b7pgd" )
+shape = SubResource("RectangleShape2D_b7pgd")
 
 [node name="UpDoor" type="Sprite2D" parent="RoomWalls"]
 position = Vector2(515, 51)
-texture = ExtResource( "5_3b5w2" )
+texture = ExtResource("5_3b5w2")
 
 [node name="Area2D" type="Area2D" parent="RoomWalls/UpDoor"]
 collision_layer = 0
@@ -297,14 +297,14 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoomWalls/UpDoor/Area2D"]
 position = Vector2(1, 9)
-shape = SubResource( "RectangleShape2D_waymt" )
+shape = SubResource("RectangleShape2D_waymt")
 
 [node name="Locker" type="StaticBody2D" parent="RoomWalls/UpDoor"]
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoomWalls/UpDoor/Locker"]
 position = Vector2(1, 17)
-shape = SubResource( "RectangleShape2D_kcdod" )
+shape = SubResource("RectangleShape2D_kcdod")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="RoomWalls"]
 collision_mask = 15
@@ -329,7 +329,7 @@ y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(8, 20)
-tile_set = SubResource( "TileSet_is1mf" )
+tile_set = SubResource("TileSet_is1mf")
 format = 2
 layer_0/name = "Ground"
 layer_0/z_index = -2
@@ -338,4 +338,4 @@ layer_0/z_index = -2
 [connection signal="body_entered" from="RoomWalls/LeftDoor/Area2D" to="." method="enter_door" binds= [Vector2(-1, 0)]]
 [connection signal="body_entered" from="RoomWalls/RightDoor/Area2D" to="." method="enter_door" binds= [Vector2(1, 0)]]
 [connection signal="body_entered" from="RoomWalls/UpDoor/Area2D" to="." method="enter_door" binds= [Vector2(0, -1)]]
-[connection signal="child_exited_tree" from="Enemies" to="." method="_on_enemies_child_exited_tree"]
+[connection signal="child_exiting_tree" from="Enemies" to="." method="_on_enemies_child_exiting_tree"]

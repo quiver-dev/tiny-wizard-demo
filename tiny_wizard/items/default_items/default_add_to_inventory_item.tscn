@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://23m7r5q686kd"]
 
-[ext_resource type="PackedScene" uid="uid://djs45wxhgd1ma" path="res://demos/tiny_wizard/items/default_items/default_item.tscn" id="1_t84cg"]
+[ext_resource type="PackedScene" uid="uid://djs45wxhgd1ma" path="res://tiny_wizard/items/default_items/default_item.tscn" id="1_t84cg"]
 [ext_resource type="Script" path="res://top-down-shooter-core/items/pickable_items/pick_item_actions/add_to_inventory.gd" id="2_cblrm"]
 
 [node name="DefaultAddToInventoryItem" instance=ExtResource( "1_t84cg" )]

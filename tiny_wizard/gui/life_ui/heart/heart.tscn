@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://cg8la57q1t6iy" path="res://demos/tiny_wizard/assets/placeholder_art/gui/Heart.png" id="1_ndnps"]
-[ext_resource type="Script" path="res://demos/tiny_wizard/gui/life_ui/heart/heart.gd" id="2_ki61j"]
+[ext_resource type="Texture2D" uid="uid://cg8la57q1t6iy" path="res://tiny_wizard/assets/placeholder_art/gui/Heart.png" id="1_ndnps"]
+[ext_resource type="Script" path="res://tiny_wizard/gui/life_ui/heart/heart.gd" id="2_ki61j"]
 
 [node name="Heart" type="TextureRect"]
 offset_right = 35.0

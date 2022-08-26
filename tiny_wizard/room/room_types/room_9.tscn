@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://qdyhlh75eu6m"]
 
-[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://demos/tiny_wizard/room/room.tscn" id="1_o627n"]
-[ext_resource type="PackedScene" uid="uid://ck7ptvnvveft" path="res://demos/tiny_wizard/enemies/black_fly/black_fly.tscn" id="2_htb2l"]
+[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://tiny_wizard/room/room.tscn" id="1_o627n"]
+[ext_resource type="PackedScene" uid="uid://ck7ptvnvveft" path="res://tiny_wizard/enemies/black_fly/black_fly.tscn" id="2_htb2l"]
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/character_stats.gd" id="3_opten"]
-[ext_resource type="PackedScene" path="res://demos/tiny_wizard/items/hearts/half_shield.tscn" id="4_1iy3s"]
+[ext_resource type="PackedScene" path="res://tiny_wizard/items/hearts/half_shield.tscn" id="4_1iy3s"]
 
 [sub_resource type="Resource" id="Resource_5kpmg"]
 resource_local_to_scene = true

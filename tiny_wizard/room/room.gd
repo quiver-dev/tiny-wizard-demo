@@ -5,17 +5,17 @@ enum Direction {RIGHT, DOWN, LEFT, UP}
 enum Status {UNEXPLORED, EXPLORED}
 
 const OPEN_DOORS = [
-	preload("res://demos/tiny_wizard/assets/placeholder_art/Doors/RightDoor.png"),
-	preload("res://demos/tiny_wizard/assets/placeholder_art/Doors/DownDoor.png"),
-	preload("res://demos/tiny_wizard/assets/placeholder_art/Doors/LeftDoor.png"),
-	preload("res://demos/tiny_wizard/assets/placeholder_art/Doors/UpDoor.png"),
+	preload("res://tiny_wizard/assets/placeholder_art/Doors/right_door.png"),
+	preload("res://tiny_wizard/assets/placeholder_art/Doors/down_door.png"),
+	preload("res://tiny_wizard/assets/placeholder_art/Doors/left_door.png"),
+	preload("res://tiny_wizard/assets/placeholder_art/Doors/up_door.png"),
 ]
 
 const CLOSED_DOORS = [
-	preload("res://demos/tiny_wizard/assets/placeholder_art/Doors/RightDoorClosed.png"),
-	preload("res://demos/tiny_wizard/assets/placeholder_art/Doors/DownDoorClosed.png"),
-	preload("res://demos/tiny_wizard/assets/placeholder_art/Doors/LeftDoorClosed.png"),
-	preload("res://demos/tiny_wizard/assets/placeholder_art/Doors/UpDoorClosed.png"),
+	preload("res://tiny_wizard/assets/placeholder_art/Doors/right_door_closed.png"),
+	preload("res://tiny_wizard/assets/placeholder_art/Doors/down_door_closed.png"),
+	preload("res://tiny_wizard/assets/placeholder_art/Doors/left_door_closed.png"),
+	preload("res://tiny_wizard/assets/placeholder_art/Doors/up_door_closed.png"),
 ]
 
 @onready var doors = [
@@ -91,9 +91,9 @@ func open_door(direction:Direction):
 	(doors[direction].get_node("Locker") as StaticBody2D).collision_layer = 0
 
 
-
-func _on_enemies_child_exited_tree(node):
+func _on_enemies_child_exiting_tree(node):
 	# If it is the last enemy (see godotengine/godot #59210)
 	if $Enemies.get_child_count() == 1:
 		for d in [Direction.RIGHT, Direction.DOWN, Direction.LEFT, Direction.UP]:
 			open_door(d)
+

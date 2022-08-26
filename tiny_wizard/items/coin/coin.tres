@@ -9,4 +9,4 @@ short_description = "A coin to get rich"
 long_description = null
 stackable = true
 stack_size = null
-pickable_item_scene = "res://demos/tiny_wizard/items/coin/coin.tscn"
+pickable_item_scene = "res://tiny_wizard/items/coin/coin.tscn"

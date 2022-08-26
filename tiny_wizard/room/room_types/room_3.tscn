@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://clrh7n7dsc2nj"]
 
-[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://demos/tiny_wizard/room/room.tscn" id="1_43kv8"]
-[ext_resource type="PackedScene" uid="uid://bu83qkq8qqvg6" path="res://demos/tiny_wizard/interactable_objects/chests/chest.tscn" id="2_tyont"]
-[ext_resource type="Resource" uid="uid://6d63alr8jx35" path="res://demos/tiny_wizard/items/coin/coin.tres" id="3_1krdd"]
-[ext_resource type="PackedScene" path="res://demos/tiny_wizard/items/hearts/half_heart.tscn" id="3_vpvpb"]
-[ext_resource type="PackedScene" uid="uid://o3yevur5onpt" path="res://demos/tiny_wizard/interactable_objects/chests/locked_chest.tscn" id="4_bwbuu"]
-[ext_resource type="Resource" uid="uid://dns8t84rxp4x5" path="res://demos/tiny_wizard/items/pickable_bomb/bomb.tres" id="5_uwgop"]
-[ext_resource type="Resource" uid="uid://bqy1wutr06tk8" path="res://demos/tiny_wizard/items/hearts/half_shield.tres" id="7_1cdyb"]
+[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://tiny_wizard/room/room.tscn" id="1_43kv8"]
+[ext_resource type="PackedScene" uid="uid://bu83qkq8qqvg6" path="res://tiny_wizard/interactable_objects/chests/chest.tscn" id="2_tyont"]
+[ext_resource type="Resource" uid="uid://6d63alr8jx35" path="res://tiny_wizard/items/coin/coin.tres" id="3_1krdd"]
+[ext_resource type="PackedScene" path="res://tiny_wizard/items/hearts/half_heart.tscn" id="3_vpvpb"]
+[ext_resource type="PackedScene" uid="uid://o3yevur5onpt" path="res://tiny_wizard/interactable_objects/chests/locked_chest.tscn" id="4_bwbuu"]
+[ext_resource type="Resource" uid="uid://dns8t84rxp4x5" path="res://tiny_wizard/items/pickable_bomb/bomb.tres" id="5_uwgop"]
+[ext_resource type="Resource" uid="uid://bqy1wutr06tk8" path="res://tiny_wizard/items/hearts/half_shield.tres" id="7_1cdyb"]
 
 [node name="Room" instance=ExtResource( "1_43kv8" )]
 

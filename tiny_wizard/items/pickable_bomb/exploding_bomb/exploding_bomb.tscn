@@ -1,11 +1,11 @@
 [gd_scene load_steps=35 format=3 uid="uid://dppu1vhjy1n1g"]
 
-[ext_resource type="Script" path="res://demos/tiny_wizard/items/pickable_bomb/exploding_bomb/exploding_bomb.gd" id="1_jlf8b"]
-[ext_resource type="Texture2D" uid="uid://2i8fpu882uck" path="res://demos/tiny_wizard/assets/placeholder_art/items/Bomb.png" id="2_4tqbq"]
-[ext_resource type="Texture2D" uid="uid://07bwu3183fl" path="res://demos/tiny_wizard/assets/placeholder_art/Shadow.png" id="3_6a5oo"]
-[ext_resource type="Texture2D" uid="uid://cfxy3terlme3j" path="res://demos/tiny_wizard/assets/placeholder_art/cirle_particle.png" id="3_ve3s1"]
-[ext_resource type="Texture2D" uid="uid://dlv23kkux0vfm" path="res://demos/tiny_wizard/assets/placeholder_art/bomb_explode.png" id="4_f2uw6"]
-[ext_resource type="Texture2D" uid="uid://b4iye6o3bt4bf" path="res://demos/tiny_wizard/assets/placeholder_art/GroundBombTrace.png" id="5_m0bgr"]
+[ext_resource type="Script" path="res://tiny_wizard/items/pickable_bomb/exploding_bomb/exploding_bomb.gd" id="1_jlf8b"]
+[ext_resource type="Texture2D" uid="uid://2i8fpu882uck" path="res://tiny_wizard/assets/placeholder_art/items/Bomb.png" id="2_4tqbq"]
+[ext_resource type="Texture2D" uid="uid://07bwu3183fl" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="3_6a5oo"]
+[ext_resource type="Texture2D" uid="uid://cfxy3terlme3j" path="res://tiny_wizard/assets/placeholder_art/cirle_particle.png" id="3_ve3s1"]
+[ext_resource type="Texture2D" uid="uid://dlv23kkux0vfm" path="res://tiny_wizard/assets/placeholder_art/bomb_explode.png" id="4_f2uw6"]
+[ext_resource type="Texture2D" uid="uid://b4iye6o3bt4bf" path="res://tiny_wizard/assets/placeholder_art/ground_bomb_trace.png" id="5_m0bgr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3dfhm"]
 friction = 100.0

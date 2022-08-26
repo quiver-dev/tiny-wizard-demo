@@ -3,8 +3,8 @@ extends QuiverCharacter
 
 
 var arrow_types = {
-	'normal': preload("res://demos/tiny_wizard/player/weapon/bullet/arrow.tscn"),
-	'violet': preload("res://demos/tiny_wizard/player/weapon/bullet/violet_arrow.tscn"),
+	'normal': preload("res://tiny_wizard/player/weapon/bullet/arrow.tscn"),
+	'violet': preload("res://tiny_wizard/player/weapon/bullet/violet_arrow.tscn"),
 }
 
 func hit(damage:=1, from:=Vector2.ZERO):

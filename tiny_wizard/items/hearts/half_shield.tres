@@ -4,16 +4,16 @@
 [ext_resource type="Script" path="res://top-down-shooter-core/items/use_actions/heal_character.gd" id="2_q1nle"]
 
 [sub_resource type="Resource" id="Resource_gdene"]
-script = ExtResource( "2_q1nle" )
+script = ExtResource("2_q1nle")
 healing_type = 1
 healing_power = 1
 
 [resource]
-script = ExtResource( "1_3xpuw" )
+script = ExtResource("1_3xpuw")
 name = "Half Shield"
 short_description = "A shield to protect you a bit"
 long_description = null
 stackable = null
 stack_size = null
-use_action = SubResource( "Resource_gdene" )
-pickable_item_scene = "res://demos/tiny_wizard/items/hearts/half_shield.tscn"
+use_action = SubResource("Resource_gdene")
+pickable_item_scene = "res://tiny_wizard/items/hearts/half_shield.tscn"

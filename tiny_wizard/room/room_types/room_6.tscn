@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bog1ldcsq4qxe"]
 
-[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://demos/tiny_wizard/room/room.tscn" id="1_43kv8"]
-[ext_resource type="PackedScene" uid="uid://bu83qkq8qqvg6" path="res://demos/tiny_wizard/interactable_objects/chests/chest.tscn" id="3_rxhyj"]
-[ext_resource type="Resource" uid="uid://6d63alr8jx35" path="res://demos/tiny_wizard/items/coin/coin.tres" id="3_u0lwx"]
-[ext_resource type="Resource" uid="uid://ca80nqtdifi7q" path="res://demos/tiny_wizard/items/key/key.tres" id="4_sp77y"]
+[ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://tiny_wizard/room/room.tscn" id="1_43kv8"]
+[ext_resource type="PackedScene" uid="uid://bu83qkq8qqvg6" path="res://tiny_wizard/interactable_objects/chests/chest.tscn" id="3_rxhyj"]
+[ext_resource type="Resource" uid="uid://6d63alr8jx35" path="res://tiny_wizard/items/coin/coin.tres" id="3_u0lwx"]
+[ext_resource type="Resource" uid="uid://ca80nqtdifi7q" path="res://tiny_wizard/items/key/key.tres" id="4_sp77y"]
 
 [node name="Room" instance=ExtResource( "1_43kv8" )]
 

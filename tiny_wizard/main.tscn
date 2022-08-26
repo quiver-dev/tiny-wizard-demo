@@ -1,6 +1,6 @@
-[gd_scene load_steps=22 format=3]
+[gd_scene load_steps=22 format=3 uid="uid://cxl7rbtvsb5nc"]
 
-[ext_resource type="Script" path="res://demos/tiny_wizard/tiny_wizard_main.gd" id="1_5rjdy"]
+[ext_resource type="Script" path="res://tiny_wizard/tiny_wizard_main.gd" id="1_5rjdy"]
 [ext_resource type="PackedScene" uid="uid://bnuih6qfwgu2p" path="res://tiny_wizard/player/player_character.tscn" id="2_5wjcq"]
 [ext_resource type="PackedScene" uid="uid://clrh7n7dsc2nj" path="res://tiny_wizard/room/room_types/room_3.tscn" id="3_fw0kv"]
 [ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://tiny_wizard/room/room.tscn" id="3_rkala"]
@@ -11,66 +11,66 @@
 [ext_resource type="PackedScene" uid="uid://bs2vw66dejdbp" path="res://tiny_wizard/room/room_types/room_7.tscn" id="8_076cv"]
 [ext_resource type="PackedScene" uid="uid://qdyhlh75eu6m" path="res://tiny_wizard/room/room_types/room_9.tscn" id="12_2njgv"]
 [ext_resource type="PackedScene" uid="uid://d01c1dqufo578" path="res://tiny_wizard/room/room_types/room_1.tscn" id="14_cw4nu"]
-[ext_resource type="Texture2D" path="res://demos/tiny_wizard/assets/placeholder_art/gui/ui_background.png" id="15_q6nlb"]
+[ext_resource type="Texture2D" uid="uid://byoeer8s488hc" path="res://tiny_wizard/assets/placeholder_art/gui/ui_background.png" id="15_q6nlb"]
 [ext_resource type="PackedScene" uid="uid://c70wougnmqni2" path="res://tiny_wizard/room/room_types/room_2.tscn" id="16_mqrf6"]
-[ext_resource type="Texture2D" path="res://demos/tiny_wizard/assets/placeholder_art/icon_mini.png" id="16_vhieg"]
-[ext_resource type="Script" path="res://demos/tiny_wizard/gui/ui_manager.gd" id="17_0sxi6"]
+[ext_resource type="Texture2D" uid="uid://celi1vm1mm6ry" path="res://tiny_wizard/assets/placeholder_art/icon_mini.png" id="16_vhieg"]
+[ext_resource type="Script" path="res://tiny_wizard/gui/ui_manager.gd" id="17_0sxi6"]
 [ext_resource type="PackedScene" path="res://tiny_wizard/gui/inventory_ui/inventory_ui.tscn" id="20_hc2ll"]
-[ext_resource type="Texture2D" path="res://demos/tiny_wizard/assets/placeholder_art/Tear.png" id="22_25mg2"]
-[ext_resource type="PackedScene" path="res://demos/tiny_wizard/gui/life_ui/hearts_ui.tscn" id="24_kl18s"]
-[ext_resource type="Resource" path="res://demos/tiny_wizard/player/player_stats.tres" id="25_g24w1"]
+[ext_resource type="Texture2D" uid="uid://cl51qj3jhnc83" path="res://tiny_wizard/assets/placeholder_art/tear.png" id="22_25mg2"]
+[ext_resource type="PackedScene" path="res://tiny_wizard/gui/life_ui/hearts_ui.tscn" id="24_kl18s"]
+[ext_resource type="Resource" path="res://tiny_wizard/player/player_stats.tres" id="25_g24w1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fe4ma"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sf2fl"]
-atlas = ExtResource( "22_25mg2" )
+atlas = ExtResource("22_25mg2")
 region = Rect2(0, 0, 100, 100)
 
 [node name="TinyWizardDemo" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource( "1_5rjdy" )
+script = ExtResource("1_5rjdy")
 metadata/_edit_vertical_guides_ = [0.0]
 
-[node name="Character" parent="." instance=ExtResource( "2_5wjcq" )]
+[node name="Character" parent="." instance=ExtResource("2_5wjcq")]
 position = Vector2(536, 592)
 
 [node name="Rooms" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Room" parent="Rooms" instance=ExtResource( "3_fw0kv" )]
+[node name="Room" parent="Rooms" instance=ExtResource("3_fw0kv")]
 position = Vector2(3072, -400)
 
-[node name="Room2" parent="Rooms" instance=ExtResource( "4_dpuob" )]
+[node name="Room2" parent="Rooms" instance=ExtResource("4_dpuob")]
 position = Vector2(1024, 1400)
 
-[node name="Room3" parent="Rooms" instance=ExtResource( "5_p25wi" )]
+[node name="Room3" parent="Rooms" instance=ExtResource("5_p25wi")]
 position = Vector2(3072, 200)
 
-[node name="Room4" parent="Rooms" instance=ExtResource( "6_nh7qh" )]
+[node name="Room4" parent="Rooms" instance=ExtResource("6_nh7qh")]
 position = Vector2(2048, 200)
 
-[node name="Room_1_-1" parent="Rooms" instance=ExtResource( "7_mobuj" )]
+[node name="Room_1_-1" parent="Rooms" instance=ExtResource("7_mobuj")]
 position = Vector2(1024, -400)
 
-[node name="Room6" parent="Rooms" instance=ExtResource( "8_076cv" )]
+[node name="Room6" parent="Rooms" instance=ExtResource("8_076cv")]
 position = Vector2(0, 1400)
 
-[node name="Room_0_0" parent="Rooms" instance=ExtResource( "3_rkala" )]
+[node name="Room_0_0" parent="Rooms" instance=ExtResource("3_rkala")]
 hide_down_door = true
 hide_left_door = true
 hide_up_door = true
 
-[node name="Room_1_0" parent="Rooms" instance=ExtResource( "14_cw4nu" )]
+[node name="Room_1_0" parent="Rooms" instance=ExtResource("14_cw4nu")]
 position = Vector2(1024, 200)
 hide_right_door = true
 
-[node name="Room_1_1" parent="Rooms" instance=ExtResource( "16_mqrf6" )]
+[node name="Room_1_1" parent="Rooms" instance=ExtResource("16_mqrf6")]
 position = Vector2(1024, 800)
 hide_right_door = true
 hide_down_door = true
 hide_left_door = true
 
-[node name="Room5" parent="Rooms" instance=ExtResource( "12_2njgv" )]
+[node name="Room5" parent="Rooms" instance=ExtResource("12_2njgv")]
 position = Vector2(-1024, 200)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -80,7 +80,7 @@ smoothing_enabled = true
 smoothing_speed = 10.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
-script = ExtResource( "17_0sxi6" )
+script = ExtResource("17_0sxi6")
 
 [node name="TopUI" type="Control" parent="Camera2D/CanvasLayer"]
 anchor_right = 1.0
@@ -89,7 +89,7 @@ anchor_right = 1.0
 offset_left = -4.0
 offset_right = 1030.0
 offset_bottom = 208.0
-texture = ExtResource( "15_q6nlb" )
+texture = ExtResource("15_q6nlb")
 stretch_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="Camera2D/CanvasLayer/TopUI/TextureRect"]
@@ -105,17 +105,17 @@ offset_bottom = 188.0
 offset_right = 50.0
 offset_bottom = 188.0
 theme_override_constants/separation = 50
-theme_override_styles/separator = SubResource( "StyleBoxFlat_fe4ma" )
+theme_override_styles/separator = SubResource("StyleBoxFlat_fe4ma")
 
 [node name="Icon" type="TextureRect" parent="Camera2D/CanvasLayer/TopUI/TextureRect/MarginContainer/HBoxContainer"]
 offset_left = 54.0
 offset_right = 358.0
 offset_bottom = 188.0
 size_flags_horizontal = 3
-texture = ExtResource( "16_vhieg" )
+texture = ExtResource("16_vhieg")
 stretch_mode = 3
 
-[node name="InventoryUI" parent="Camera2D/CanvasLayer/TopUI/TextureRect/MarginContainer/HBoxContainer" instance=ExtResource( "20_hc2ll" )]
+[node name="InventoryUI" parent="Camera2D/CanvasLayer/TopUI/TextureRect/MarginContainer/HBoxContainer" instance=ExtResource("20_hc2ll")]
 offset_left = 362.0
 offset_right = 404.0
 offset_bottom = 188.0
@@ -125,7 +125,7 @@ offset_left = 408.0
 offset_right = 418.0
 offset_bottom = 188.0
 theme_override_constants/separation = 10
-theme_override_styles/separator = SubResource( "StyleBoxFlat_fe4ma" )
+theme_override_styles/separator = SubResource("StyleBoxFlat_fe4ma")
 
 [node name="MarginContainer" type="MarginContainer" parent="Camera2D/CanvasLayer/TopUI/TextureRect/MarginContainer/HBoxContainer"]
 offset_left = 422.0
@@ -133,14 +133,14 @@ offset_right = 726.0
 offset_bottom = 188.0
 size_flags_horizontal = 3
 
-[node name="HeartsUI" parent="Camera2D/CanvasLayer/TopUI/TextureRect/MarginContainer/HBoxContainer" instance=ExtResource( "24_kl18s" )]
+[node name="HeartsUI" parent="Camera2D/CanvasLayer/TopUI/TextureRect/MarginContainer/HBoxContainer" instance=ExtResource("24_kl18s")]
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 880.0
 offset_right = 884.0
 offset_bottom = 188.0
 size_flags_horizontal = 6
-player_stats = ExtResource( "25_g24w1" )
+player_stats = ExtResource("25_g24w1")
 
 [node name="CenterContainer" type="CenterContainer" parent="Camera2D/CanvasLayer/TopUI/TextureRect"]
 anchor_right = 1.0
@@ -149,13 +149,12 @@ offset_bottom = -23.0
 
 [node name="ArrowUITexture" type="TextureRect" parent="Camera2D/CanvasLayer/TopUI/TextureRect/CenterContainer"]
 unique_name_in_owner = true
-minimum_size = Vector2(150, 150)
-offset_left = 442.0
-offset_top = 17.0
-offset_right = 592.0
-offset_bottom = 167.0
+offset_left = 467.0
+offset_top = 42.0
+offset_right = 567.0
+offset_bottom = 142.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource( "AtlasTexture_sf2fl" )
+texture = SubResource("AtlasTexture_sf2fl")
 stretch_mode = 5
 metadata/_edit_layout_mode = 1

@@ -4,16 +4,16 @@
 [ext_resource type="Script" path="res://top-down-shooter-core/items/use_actions/heal_character.gd" id="2_kc5xy"]
 
 [sub_resource type="Resource" id="Resource_b5sdn"]
-script = ExtResource( "2_kc5xy" )
+script = ExtResource("2_kc5xy")
 healing_type = 1
 healing_power = 1
 
 [resource]
-script = ExtResource( "1_pdifm" )
+script = ExtResource("1_pdifm")
 name = "Full Heart"
 short_description = "A full heart to heal you"
 long_description = null
 stackable = null
 stack_size = null
-use_action = SubResource( "Resource_b5sdn" )
+use_action = SubResource("Resource_b5sdn")
 pickable_item_scene = "null"
