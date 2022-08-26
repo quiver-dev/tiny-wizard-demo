@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://tiny_wizard/interactable_objects/chests/chest_sprite.gd" id="3_ne01s"]
 [ext_resource type="Script" path="res://tiny_wizard/interactable_objects/chests/open_chest.gd" id="4_3i1hb"]
 [ext_resource type="Texture2D" path="res://tiny_wizard/assets/placeholder_art/Chests/gold_chest_open.png" id="4_k3duw"]
-[ext_resource type="Texture2D" uid="uid://dns4ivjgkdvv7" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="5_7l7pb"]
+[ext_resource type="Texture2D" uid="uid://u2qrtjpgbv2k" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="5_7l7pb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yy5pk"]
 radius = 16.0

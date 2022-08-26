@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://c3bp3q2valq35" path="res://tiny_wizard/interactable_objects/default_interactable_object/interact_on_collide.tscn" id="1_1y646"]
 [ext_resource type="Script" path="res://tiny_wizard/interactable_objects/chests/chest.gd" id="2_lsfc8"]
-[ext_resource type="Texture2D" uid="uid://viy41v3wndxr" path="res://tiny_wizard/assets/placeholder_art/chests/normal_chest_closed.png" id="3_l3g5r"]
+[ext_resource type="Texture2D" uid="uid://cnp2uemdmxsd3" path="res://tiny_wizard/assets/placeholder_art/chests/normal_chest_closed.png" id="3_l3g5r"]
 [ext_resource type="Script" path="res://tiny_wizard/interactable_objects/chests/chest_sprite.gd" id="3_ne01s"]
 [ext_resource type="Script" path="res://tiny_wizard/interactable_objects/chests/open_chest.gd" id="4_3i1hb"]
-[ext_resource type="Texture2D" uid="uid://bkt0nlypbhibw" path="res://tiny_wizard/assets/placeholder_art/chests/normal_chest_open.png" id="5_6k8xq"]
+[ext_resource type="Texture2D" uid="uid://bmgtdcttnlmjl" path="res://tiny_wizard/assets/placeholder_art/chests/normal_chest_open.png" id="5_6k8xq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yy5pk"]
 radius = 16.0

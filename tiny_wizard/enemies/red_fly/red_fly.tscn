@@ -1,12 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://8gachgsj3jdx"]
+[gd_scene load_steps=16 format=3 uid="uid://8gachgsj3jdx"]
 
 [ext_resource type="PackedScene" uid="uid://ckan5lwiqvq2a" path="res://top-down-shooter-core/character/character.tscn" id="1_5wxj1"]
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/character_stats.gd" id="2_72r4n"]
 [ext_resource type="Script" path="res://tiny_wizard/enemies/black_fly/Visual.gd" id="2_w4t8f"]
-[ext_resource type="Texture2D" uid="uid://dns4ivjgkdvv7" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="3_m8u5l"]
-[ext_resource type="Texture2D" uid="uid://qa3p82e4msg0" path="res://tiny_wizard/assets/placeholder_art/red_fly.png" id="5_sbtwb"]
+[ext_resource type="Texture2D" uid="uid://u2qrtjpgbv2k" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="3_m8u5l"]
+[ext_resource type="Texture2D" uid="uid://c0plc77imddvj" path="res://tiny_wizard/assets/placeholder_art/red_fly.png" id="5_sbtwb"]
 [ext_resource type="Script" path="res://tiny_wizard/enemies/red_fly/red_fly_behavior.gd" id="7_a27uj"]
 [ext_resource type="PackedScene" path="res://tiny_wizard/enemies/red_fly/red_fly_weapon.tscn" id="7_g7bvv"]
+[ext_resource type="PackedScene" uid="uid://cbx5e1m0wvfyn" path="res://top-down-shooter-core/character/behavior/behavior_modules/player_detector.tscn" id="8_8aefy"]
 
 [sub_resource type="Resource" id="Resource_l4q4c"]
 resource_local_to_scene = true
@@ -71,17 +72,12 @@ shape = SubResource("CircleShape2D_bk4cl")
 visible = false
 script = ExtResource("7_a27uj")
 
-[node name="PlayerDetectionArea" type="Area2D" parent="Behavior" index="0"]
-collision_layer = 0
-collision_mask = 2
+[node name="PlayerDetector" parent="Behavior" index="0" instance=ExtResource("8_8aefy")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Behavior/PlayerDetectionArea" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Behavior/PlayerDetector" index="0"]
 modulate = Color(0.52549, 1, 0.333333, 0.282353)
 z_index = -1
 shape = SubResource("CircleShape2D_qgtul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 shape = SubResource("CircleShape2D_6gp4s")
-
-[connection signal="body_entered" from="Behavior/PlayerDetectionArea" to="Behavior" method="_on_player_detection_area_body_entered"]
-[connection signal="body_exited" from="Behavior/PlayerDetectionArea" to="Behavior" method="_on_player_detection_area_body_exited"]
