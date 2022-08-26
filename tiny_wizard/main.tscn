@@ -80,6 +80,7 @@ smoothing_enabled = true
 smoothing_speed = 10.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+layer = 0
 script = ExtResource("17_0sxi6")
 
 [node name="TopUI" type="Control" parent="Camera2D/CanvasLayer"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlo4271dv15fm"
-path="res://.godot/imported/gold_chest_closed.png-7ae627eacc8c15a336d73b7dd674e94e.ctex"
+path="res://.godot/imported/gold_chest_closed.png-d30d106c1d08b14a2e4eff13ecdee168.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiny_wizard/assets/placeholder_art/chests/gold_chest_closed.png"
-dest_files=["res://.godot/imported/gold_chest_closed.png-7ae627eacc8c15a336d73b7dd674e94e.ctex"]
+source_file="res://tiny_wizard/assets/placeholder_art/Chests/gold_chest_closed.png"
+dest_files=["res://.godot/imported/gold_chest_closed.png-d30d106c1d08b14a2e4eff13ecdee168.ctex"]
 
 [params]
 
