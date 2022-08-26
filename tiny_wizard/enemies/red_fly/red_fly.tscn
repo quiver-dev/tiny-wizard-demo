@@ -1,29 +1,29 @@
-[gd_scene load_steps=15 format=3 uid="uid://dbgrx8pumpt3n"]
+[gd_scene load_steps=15 format=3 uid="uid://8gachgsj3jdx"]
 
 [ext_resource type="PackedScene" uid="uid://ckan5lwiqvq2a" path="res://top-down-shooter-core/character/character.tscn" id="1_5wxj1"]
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/character_stats.gd" id="2_72r4n"]
 [ext_resource type="Script" path="res://tiny_wizard/enemies/black_fly/Visual.gd" id="2_w4t8f"]
-[ext_resource type="Texture2D" uid="uid://07bwu3183fl" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="3_m8u5l"]
-[ext_resource type="Texture2D" uid="uid://dsacy2ebbg67k" path="res://tiny_wizard/assets/placeholder_art/red_fly.png" id="5_sbtwb"]
-[ext_resource type="Script" path="res://tiny_wizard/enemies/black_fly/behavior.gd" id="5_yqn2h"]
+[ext_resource type="Texture2D" uid="uid://dns4ivjgkdvv7" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="3_m8u5l"]
+[ext_resource type="Texture2D" uid="uid://qa3p82e4msg0" path="res://tiny_wizard/assets/placeholder_art/red_fly.png" id="5_sbtwb"]
+[ext_resource type="Script" path="res://tiny_wizard/enemies/red_fly/red_fly_behavior.gd" id="7_a27uj"]
 [ext_resource type="PackedScene" path="res://tiny_wizard/enemies/red_fly/red_fly_weapon.tscn" id="7_g7bvv"]
 
 [sub_resource type="Resource" id="Resource_l4q4c"]
 resource_local_to_scene = true
-script = ExtResource( "2_72r4n" )
+script = ExtResource("2_72r4n")
 max_life = 3
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g200e"]
-atlas = ExtResource( "5_sbtwb" )
+atlas = ExtResource("5_sbtwb")
 region = Rect2(0, 0, 60, 60)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qrmuw"]
-atlas = ExtResource( "5_sbtwb" )
+atlas = ExtResource("5_sbtwb")
 region = Rect2(60, 0, 60, 60)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_63q4l"]
 animations = [{
-"frames": [SubResource( "AtlasTexture_g200e" ), SubResource( "AtlasTexture_qrmuw" )],
+"frames": [SubResource("AtlasTexture_g200e"), SubResource("AtlasTexture_qrmuw")],
 "loop": true,
 "name": &"default",
 "speed": 15.0
@@ -38,38 +38,38 @@ radius = 253.333
 [sub_resource type="CircleShape2D" id="CircleShape2D_6gp4s"]
 radius = 7.0
 
-[node name="RedFly" instance=ExtResource( "1_5wxj1" )]
+[node name="RedFly" instance=ExtResource("1_5wxj1")]
 process_mode = 4
 scale = Vector2(0.6, 0.6)
 y_sort_enabled = true
 disable_mode = 1
 collision_layer = 8
-character_stats = SubResource( "Resource_l4q4c" )
+character_stats = SubResource("Resource_l4q4c")
 max_speed = 90.0
 impulse_force = 500.0
 
 [node name="Visual" parent="." index="0"]
-script = ExtResource( "2_w4t8f" )
+script = ExtResource("2_w4t8f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visual" index="0"]
 position = Vector2(0, -52)
-frames = SubResource( "SpriteFrames_63q4l" )
+frames = SubResource("SpriteFrames_63q4l")
 frame = 1
 playing = true
 
 [node name="Shadow" type="Sprite2D" parent="Visual" index="1"]
 modulate = Color(1, 1, 1, 0.384314)
 scale = Vector2(0.298658, 0.3)
-texture = ExtResource( "3_m8u5l" )
+texture = ExtResource("3_m8u5l")
 
-[node name="MeleeWeapon" parent="Visual" index="2" instance=ExtResource( "7_g7bvv" )]
+[node name="MeleeWeapon" parent="Visual" index="2" instance=ExtResource("7_g7bvv")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Visual/MeleeWeapon" index="0"]
-shape = SubResource( "CircleShape2D_bk4cl" )
+shape = SubResource("CircleShape2D_bk4cl")
 
 [node name="Behavior" parent="." index="1"]
 visible = false
-script = ExtResource( "5_yqn2h" )
+script = ExtResource("7_a27uj")
 
 [node name="PlayerDetectionArea" type="Area2D" parent="Behavior" index="0"]
 collision_layer = 0
@@ -78,10 +78,10 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Behavior/PlayerDetectionArea" index="0"]
 modulate = Color(0.52549, 1, 0.333333, 0.282353)
 z_index = -1
-shape = SubResource( "CircleShape2D_qgtul" )
+shape = SubResource("CircleShape2D_qgtul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
-shape = SubResource( "CircleShape2D_6gp4s" )
+shape = SubResource("CircleShape2D_6gp4s")
 
 [connection signal="body_entered" from="Behavior/PlayerDetectionArea" to="Behavior" method="_on_player_detection_area_body_entered"]
 [connection signal="body_exited" from="Behavior/PlayerDetectionArea" to="Behavior" method="_on_player_detection_area_body_exited"]

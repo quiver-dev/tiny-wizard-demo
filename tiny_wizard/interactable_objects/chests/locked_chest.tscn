@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://o3yevur5onpt"]
 
 [ext_resource type="PackedScene" uid="uid://c3bp3q2valq35" path="res://tiny_wizard/interactable_objects/default_interactable_object/interact_on_collide.tscn" id="1_1y646"]
-[ext_resource type="Texture2D" uid="uid://dlo4271dv15fm" path="res://tiny_wizard/assets/placeholder_art/Chests/gold_chest_closed.png" id="2_jbyk4"]
+[ext_resource type="Texture2D" path="res://tiny_wizard/assets/placeholder_art/Chests/gold_chest_closed.png" id="2_jbyk4"]
 [ext_resource type="Script" path="res://tiny_wizard/interactable_objects/chests/chest.gd" id="2_rarlb"]
 [ext_resource type="Script" path="res://tiny_wizard/interactable_objects/chests/chest_sprite.gd" id="3_ne01s"]
 [ext_resource type="Script" path="res://tiny_wizard/interactable_objects/chests/open_chest.gd" id="4_3i1hb"]
-[ext_resource type="Texture2D" uid="uid://kp8b81uu5wis" path="res://tiny_wizard/assets/placeholder_art/Chests/gold_chest_open.png" id="4_k3duw"]
-[ext_resource type="Texture2D" uid="uid://b08k56fwrciy3" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="5_7l7pb"]
+[ext_resource type="Texture2D" path="res://tiny_wizard/assets/placeholder_art/Chests/gold_chest_open.png" id="4_k3duw"]
+[ext_resource type="Texture2D" uid="uid://dns4ivjgkdvv7" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="5_7l7pb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yy5pk"]
 radius = 16.0

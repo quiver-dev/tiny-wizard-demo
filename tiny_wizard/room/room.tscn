@@ -1,12 +1,12 @@
 [gd_scene load_steps=18 format=3 uid="uid://de3l1l1odllgl"]
 
 [ext_resource type="Texture2D" path="res://tiny_wizard/assets/placeholder_art/Room.png" id="1_gcfa5"]
-[ext_resource type="Texture2D" uid="uid://cagcc38r16kd3" path="res://tiny_wizard/assets/placeholder_art/Doors/down_door.png" id="2_e7uf5"]
+[ext_resource type="Texture2D" path="res://tiny_wizard/assets/placeholder_art/Doors/down_door.png" id="2_e7uf5"]
 [ext_resource type="Script" path="res://tiny_wizard/room/room.gd" id="2_xgkvw"]
-[ext_resource type="Texture2D" uid="uid://b64fuo1ncowc4" path="res://tiny_wizard/assets/placeholder_art/Doors/left_door.png" id="3_0mrgv"]
-[ext_resource type="Texture2D" uid="uid://djtha5cwuj2g" path="res://tiny_wizard/assets/placeholder_art/Doors/right_door.png" id="4_2wnvf"]
-[ext_resource type="Texture2D" uid="uid://b54wion82dhwh" path="res://tiny_wizard/assets/placeholder_art/Doors/up_door.png" id="5_3b5w2"]
-[ext_resource type="Texture2D" uid="uid://cq53yvea130jy" path="res://tiny_wizard/assets/placeholder_art/hole_tileset.png" id="7_j8rd3"]
+[ext_resource type="Texture2D" path="res://tiny_wizard/assets/placeholder_art/Doors/left_door.png" id="3_0mrgv"]
+[ext_resource type="Texture2D" path="res://tiny_wizard/assets/placeholder_art/Doors/right_door.png" id="4_2wnvf"]
+[ext_resource type="Texture2D" path="res://tiny_wizard/assets/placeholder_art/Doors/up_door.png" id="5_3b5w2"]
+[ext_resource type="Texture2D" uid="uid://cf1ecubdaio4p" path="res://tiny_wizard/assets/placeholder_art/hole_tileset.png" id="7_j8rd3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5api5"]
 size = Vector2(80, 8)
