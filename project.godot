@@ -89,6 +89,11 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://top-down-shooter-core/weapons/magazine.gd"
 }, {
+"base": "Resource",
+"class": &"QuiverPhysicsStats",
+"language": &"GDScript",
+"path": "res://top-down-shooter-core/character/character_stats/physics_stats.gd"
+}, {
 "base": "QuiverInteractableObjectAction",
 "class": &"QuiverPickItemAction",
 "language": &"GDScript",
@@ -116,6 +121,7 @@ _global_script_class_icons={
 "QuiverItemUseActionHealCharacter": "",
 "QuiverItemUseSpawnAScene": "",
 "QuiverMagazine": "",
+"QuiverPhysicsStats": "",
 "QuiverPickItemAction": "",
 "QuiverPickableItem": ""
 }
