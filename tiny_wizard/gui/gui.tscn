@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://c45gqa1w6c20d"]
+
+[ext_resource type="Script" path="res://tiny_wizard/gui/ui_manager.gd" id="1_56tem"]
+[ext_resource type="Texture2D" uid="uid://w04k0h8orxb6" path="res://tiny_wizard/assets/placeholder_art/gui/ui_background.png" id="2_2gyvq"]
+[ext_resource type="Texture2D" uid="uid://c33vhuxnggir3" path="res://tiny_wizard/assets/placeholder_art/icon_mini.png" id="3_hwuvp"]
+[ext_resource type="PackedScene" path="res://tiny_wizard/gui/inventory_ui/inventory_ui.tscn" id="4_80vvw"]
+[ext_resource type="PackedScene" path="res://tiny_wizard/gui/life_ui/hearts_ui.tscn" id="5_7glrf"]
+[ext_resource type="Resource" path="res://tiny_wizard/player/player_stats.tres" id="6_mshvq"]
+[ext_resource type="Texture2D" uid="uid://po7sckq8pbtr" path="res://tiny_wizard/assets/placeholder_art/tear.png" id="7_6oebw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fe4ma"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf2fl"]
+atlas = ExtResource("7_6oebw")
+region = Rect2(0, 0, 100, 100)
+
+[node name="GUI" type="CanvasLayer"]
+layer = 0
+script = ExtResource("1_56tem")
+
+[node name="TopUI" type="Control" parent="."]
+anchor_right = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="TopUI"]
+offset_left = -4.0
+offset_right = 1030.0
+offset_bottom = 208.0
+texture = ExtResource("2_2gyvq")
+stretch_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TopUI/TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopUI/TextureRect/MarginContainer"]
+offset_right = 1034.0
+offset_bottom = 188.0
+
+[node name="VSeparator2" type="VSeparator" parent="TopUI/TextureRect/MarginContainer/HBoxContainer"]
+offset_right = 50.0
+offset_bottom = 188.0
+theme_override_constants/separation = 50
+theme_override_styles/separator = SubResource("StyleBoxFlat_fe4ma")
+
+[node name="Icon" type="TextureRect" parent="TopUI/TextureRect/MarginContainer/HBoxContainer"]
+offset_left = 54.0
+offset_right = 358.0
+offset_bottom = 188.0
+size_flags_horizontal = 3
+texture = ExtResource("3_hwuvp")
+stretch_mode = 3
+
+[node name="InventoryUI" parent="TopUI/TextureRect/MarginContainer/HBoxContainer" instance=ExtResource("4_80vvw")]
+offset_left = 362.0
+offset_right = 404.0
+offset_bottom = 188.0
+
+[node name="VSeparator" type="VSeparator" parent="TopUI/TextureRect/MarginContainer/HBoxContainer"]
+offset_left = 408.0
+offset_right = 418.0
+offset_bottom = 188.0
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxFlat_fe4ma")
+
+[node name="MarginContainer" type="MarginContainer" parent="TopUI/TextureRect/MarginContainer/HBoxContainer"]
+offset_left = 422.0
+offset_right = 726.0
+offset_bottom = 188.0
+size_flags_horizontal = 3
+
+[node name="HeartsUI" parent="TopUI/TextureRect/MarginContainer/HBoxContainer" instance=ExtResource("5_7glrf")]
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 880.0
+offset_right = 884.0
+offset_bottom = 188.0
+size_flags_horizontal = 6
+player_stats = ExtResource("6_mshvq")
+
+[node name="CenterContainer" type="CenterContainer" parent="TopUI/TextureRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -23.0
+
+[node name="ArrowUITexture" type="TextureRect" parent="TopUI/TextureRect/CenterContainer"]
+unique_name_in_owner = true
+offset_left = 467.0
+offset_top = 42.0
+offset_right = 567.0
+offset_bottom = 142.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_sf2fl")
+stretch_mode = 5
+metadata/_edit_layout_mode = 1

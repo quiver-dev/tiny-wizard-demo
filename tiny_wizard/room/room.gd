@@ -1,10 +1,10 @@
 @tool
 extends Node2D
 
-const ROOM_SIZE = Vector2(1024,600)
-
 enum Direction {RIGHT, DOWN, LEFT, UP}
 enum Status {UNEXPLORED, EXPLORED}
+
+const ROOM_SIZE = Vector2(1024,600)
 
 const OPEN_DOORS = [
 	preload("res://tiny_wizard/assets/placeholder_art/Doors/right_door.png"),
@@ -19,6 +19,9 @@ const CLOSED_DOORS = [
 	preload("res://tiny_wizard/assets/placeholder_art/Doors/left_door_closed.png"),
 	preload("res://tiny_wizard/assets/placeholder_art/Doors/up_door_closed.png"),
 ]
+
+const PLAYER_CHARACTER = preload("res://tiny_wizard/player/player_character.tscn")
+const GUI_SCENE = preload("res://tiny_wizard/gui/gui.tscn")
 
 @onready var doors = [
 	$RoomWalls/RightDoor,
@@ -43,6 +46,18 @@ const CLOSED_DOORS = [
 var room_pos := Vector2i.ZERO
 
 signal door_entered(direction)
+
+func _ready():
+	# This spawns the player if launching the scene from the editor
+	# This allows to run the room and test it without having to launch the game
+	if get_tree().current_scene == self:
+		var player_node = PLAYER_CHARACTER.instantiate()
+		add_child(player_node)
+		player_node.position = spawn_points[0].position
+		enter_room()
+		var gui = GUI_SCENE.instantiate()
+		add_child(gui)
+	pass
 
 # Get the position of the room on the level matrix: (0,0), (0,1)...
 func get_room_matrix_position()->Vector2i:
