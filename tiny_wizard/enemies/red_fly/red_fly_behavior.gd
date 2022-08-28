@@ -23,3 +23,5 @@ func _process(delta):
 	
 	action.moving_direction = _random_movement + 5*_player_movement
 
+func on_wall_collision(collision: KinematicCollision2D)->void:
+	action.moving_direction = collision.get_normal()

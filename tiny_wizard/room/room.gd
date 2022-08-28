@@ -1,6 +1,8 @@
 @tool
 extends Node2D
 
+const ROOM_SIZE = Vector2(1024,600)
+
 enum Direction {RIGHT, DOWN, LEFT, UP}
 enum Status {UNEXPLORED, EXPLORED}
 
@@ -32,16 +34,28 @@ const CLOSED_DOORS = [
 	$UpSpawnPoint,
 ]
 
-var room_status := Status.UNEXPLORED
 
 @export var hide_right_door := false
 @export var hide_down_door := false
 @export var hide_left_door := false
 @export var hide_up_door := false
 
+var room_pos := Vector2i.ZERO
 
 signal door_entered(direction)
 
+# Get the position of the room on the level matrix: (0,0), (0,1)...
+func get_room_matrix_position()->Vector2i:
+	return room_pos
+
+func get_room_global_position()->Vector2:
+	return global_position
+
+func get_room_rect()->Rect2:
+	return Rect2(
+		global_position,
+		ROOM_SIZE
+	)
 
 func update_doors():
 	if hide_right_door: _hide_door(Direction.RIGHT)

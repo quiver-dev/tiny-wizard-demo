@@ -1,10 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://qdyhlh75eu6m"]
+[gd_scene load_steps=12 format=3 uid="uid://qdyhlh75eu6m"]
 
 [ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://tiny_wizard/room/room.tscn" id="1_o627n"]
 [ext_resource type="PackedScene" uid="uid://cnoc26x8qgyyw" path="res://tiny_wizard/enemies/black_fly/black_fly.tscn" id="2_htb2l"]
+[ext_resource type="Texture2D" uid="uid://bjfiwnbm17tnx" path="res://tiny_wizard/assets/placeholder_art/Doors/down_door.png" id="2_onpj8"]
+[ext_resource type="Texture2D" uid="uid://cqxyrxqrb7lhm" path="res://tiny_wizard/assets/placeholder_art/Doors/left_door.png" id="3_cecqa"]
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/character_stats.gd" id="3_opten"]
 [ext_resource type="PackedScene" uid="uid://cdb6il7uu0i7v" path="res://tiny_wizard/items/hearts/half_shield.tscn" id="4_1iy3s"]
+[ext_resource type="Texture2D" uid="uid://c2l6apt2s8q8f" path="res://tiny_wizard/assets/placeholder_art/Doors/right_door.png" id="4_eh78e"]
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/physics_stats.gd" id="4_i7cey"]
+[ext_resource type="Texture2D" uid="uid://dtuhal8kv4l1d" path="res://tiny_wizard/assets/placeholder_art/Doors/up_door.png" id="5_tkvmg"]
 
 [sub_resource type="Resource" id="Resource_5kpmg"]
 resource_local_to_scene = true
@@ -20,6 +24,18 @@ friction = 0.1
 impulse_force = 500.0
 
 [node name="Room" instance=ExtResource("1_o627n")]
+
+[node name="DownDoor" parent="RoomWalls" index="0"]
+texture = ExtResource("2_onpj8")
+
+[node name="LeftDoor" parent="RoomWalls" index="1"]
+texture = ExtResource("3_cecqa")
+
+[node name="RightDoor" parent="RoomWalls" index="2"]
+texture = ExtResource("4_eh78e")
+
+[node name="UpDoor" parent="RoomWalls" index="3"]
+texture = ExtResource("5_tkvmg")
 
 [node name="BlackFly" parent="Enemies" index="0" instance=ExtResource("2_htb2l")]
 position = Vector2(231, 305)

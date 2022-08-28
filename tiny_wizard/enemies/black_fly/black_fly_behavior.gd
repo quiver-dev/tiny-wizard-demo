@@ -10,3 +10,6 @@ func _process(delta):
 	if _t <= 0:
 		action.moving_direction = Vector2.RIGHT.rotated(randf()*2*PI)
 		_t = CHANGE_DIRECTION_TIME
+
+func on_wall_collision(collision: KinematicCollision2D)->void:
+	action.moving_direction = collision.get_normal()
