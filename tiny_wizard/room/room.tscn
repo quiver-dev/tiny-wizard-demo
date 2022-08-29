@@ -1,11 +1,11 @@
 [gd_scene load_steps=18 format=3 uid="uid://de3l1l1odllgl"]
 
-[ext_resource type="Texture2D" path="res://tiny_wizard/assets/placeholder_art/Room.png" id="1_gcfa5"]
-[ext_resource type="Texture2D" uid="uid://bjfiwnbm17tnx" path="res://tiny_wizard/assets/placeholder_art/doors/down_door.png" id="2_e7uf5"]
+[ext_resource type="Texture2D" uid="uid://bjfiwnbm17tnx" path="res://tiny_wizard/assets/placeholder_art/Doors/down_door.png" id="2_e7uf5"]
+[ext_resource type="Texture2D" uid="uid://dejilyb7nodqg" path="res://tiny_wizard/assets/art/room.png" id="2_hc0od"]
 [ext_resource type="Script" path="res://tiny_wizard/room/room.gd" id="2_xgkvw"]
-[ext_resource type="Texture2D" uid="uid://cqxyrxqrb7lhm" path="res://tiny_wizard/assets/placeholder_art/doors/left_door.png" id="3_0mrgv"]
-[ext_resource type="Texture2D" uid="uid://c2l6apt2s8q8f" path="res://tiny_wizard/assets/placeholder_art/doors/right_door.png" id="4_2wnvf"]
-[ext_resource type="Texture2D" uid="uid://dtuhal8kv4l1d" path="res://tiny_wizard/assets/placeholder_art/doors/up_door.png" id="5_3b5w2"]
+[ext_resource type="Texture2D" uid="uid://cqxyrxqrb7lhm" path="res://tiny_wizard/assets/placeholder_art/Doors/left_door.png" id="3_0mrgv"]
+[ext_resource type="Texture2D" uid="uid://c2l6apt2s8q8f" path="res://tiny_wizard/assets/placeholder_art/Doors/right_door.png" id="4_2wnvf"]
+[ext_resource type="Texture2D" uid="uid://dtuhal8kv4l1d" path="res://tiny_wizard/assets/placeholder_art/Doors/up_door.png" id="5_3b5w2"]
 [ext_resource type="Texture2D" uid="uid://b8bruoruhxjp0" path="res://tiny_wizard/assets/placeholder_art/hole_tileset.png" id="7_j8rd3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5api5"]
@@ -227,7 +227,7 @@ script = ExtResource("2_xgkvw")
 
 [node name="RoomWalls" type="Sprite2D" parent="."]
 z_index = -3
-texture = ExtResource("1_gcfa5")
+texture = ExtResource("2_hc0od")
 centered = false
 
 [node name="DownDoor" type="Sprite2D" parent="RoomWalls"]
