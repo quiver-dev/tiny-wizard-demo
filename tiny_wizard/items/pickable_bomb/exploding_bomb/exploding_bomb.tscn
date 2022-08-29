@@ -1,11 +1,11 @@
 [gd_scene load_steps=35 format=3 uid="uid://dppu1vhjy1n1g"]
 
 [ext_resource type="Script" path="res://tiny_wizard/items/pickable_bomb/exploding_bomb/exploding_bomb.gd" id="1_jlf8b"]
-[ext_resource type="Texture2D" uid="uid://2i8fpu882uck" path="res://tiny_wizard/assets/placeholder_art/items/Bomb.png" id="2_4tqbq"]
-[ext_resource type="Texture2D" uid="uid://07bwu3183fl" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="3_6a5oo"]
-[ext_resource type="Texture2D" uid="uid://cfxy3terlme3j" path="res://tiny_wizard/assets/placeholder_art/cirle_particle.png" id="3_ve3s1"]
-[ext_resource type="Texture2D" uid="uid://dlv23kkux0vfm" path="res://tiny_wizard/assets/placeholder_art/bomb_explode.png" id="4_f2uw6"]
-[ext_resource type="Texture2D" uid="uid://b4iye6o3bt4bf" path="res://tiny_wizard/assets/placeholder_art/ground_bomb_trace.png" id="5_m0bgr"]
+[ext_resource type="Texture2D" path="res://tiny_wizard/assets/placeholder_art/items/Bomb.png" id="2_4tqbq"]
+[ext_resource type="Texture2D" uid="uid://u2qrtjpgbv2k" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="3_6a5oo"]
+[ext_resource type="Texture2D" uid="uid://5kp53r44h5na" path="res://tiny_wizard/assets/placeholder_art/cirle_particle.png" id="3_ve3s1"]
+[ext_resource type="Texture2D" uid="uid://bk56deby3bo3f" path="res://tiny_wizard/assets/placeholder_art/ground_bomb_trace.png" id="5_m0bgr"]
+[ext_resource type="Texture2D" uid="uid://bgpm7hssikrkl" path="res://tiny_wizard/assets/art/bomb_explode.png" id="5_p4d5h"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3dfhm"]
 friction = 100.0
@@ -17,7 +17,7 @@ _data = [Vector2(0, 1), 0.0, 1.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="CurveTexture" id="CurveTexture_jvw6x"]
-curve = SubResource( "Curve_5pkwd" )
+curve = SubResource("Curve_5pkwd")
 
 [sub_resource type="ParticlesMaterial" id="ParticlesMaterial_ctqlr"]
 particle_flag_disable_z = true
@@ -29,7 +29,7 @@ orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
 scale_min = 0.07
 scale_max = 0.11
-scale_curve = SubResource( "CurveTexture_jvw6x" )
+scale_curve = SubResource("CurveTexture_jvw6x")
 color = Color(1, 0.85098, 0.211765, 1)
 
 [sub_resource type="ParticlesMaterial" id="ParticlesMaterial_a2mvr"]
@@ -42,7 +42,7 @@ orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
 scale_min = 0.07
 scale_max = 0.18
-scale_curve = SubResource( "CurveTexture_jvw6x" )
+scale_curve = SubResource("CurveTexture_jvw6x")
 color = Color(1, 0.0941176, 0, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hxqpl"]
@@ -51,73 +51,73 @@ radius = 8.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_jhpt5"]
 radius = 125.004
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vyvwp"]
-atlas = ExtResource( "4_f2uw6" )
-region = Rect2(0, 0, 344, 344)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yvpuo"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpisd"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(344, 0, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gnbpv"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ehax"]
+atlas = ExtResource("5_p4d5h")
+region = Rect2(0, 0, 344, 344)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uaf62"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(688, 0, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_shunk"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_euhbg"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(1032, 0, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3qyrh"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_74310"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(0, 344, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jp7fj"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_71mv5"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(344, 344, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ej7n"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvkmr"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(688, 344, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ulegm"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yv4a"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(1032, 344, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_34snk"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi0vg"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(0, 688, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xuy8u"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_j43yo"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(344, 688, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_udpij"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_80e5q"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(688, 688, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_loqmc"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_l18o3"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(1032, 688, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_46a6u"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_fj8vf"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(0, 1032, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p8crt"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqj5o"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(344, 1032, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ny81j"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_acpqa"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(688, 1032, 344, 344)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5hq2n"]
-atlas = ExtResource( "4_f2uw6" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_krrv4"]
+atlas = ExtResource("5_p4d5h")
 region = Rect2(1032, 1032, 344, 344)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ueob"]
 animations = [{
-"frames": [null, SubResource( "AtlasTexture_vyvwp" ), SubResource( "AtlasTexture_yvpuo" ), SubResource( "AtlasTexture_gnbpv" ), SubResource( "AtlasTexture_shunk" ), SubResource( "AtlasTexture_3qyrh" ), SubResource( "AtlasTexture_jp7fj" ), SubResource( "AtlasTexture_7ej7n" ), SubResource( "AtlasTexture_ulegm" ), SubResource( "AtlasTexture_34snk" ), SubResource( "AtlasTexture_xuy8u" ), SubResource( "AtlasTexture_udpij" ), SubResource( "AtlasTexture_loqmc" ), SubResource( "AtlasTexture_46a6u" ), SubResource( "AtlasTexture_p8crt" ), SubResource( "AtlasTexture_ny81j" ), SubResource( "AtlasTexture_5hq2n" )],
+"frames": [null, SubResource("AtlasTexture_gpisd"), SubResource("AtlasTexture_5ehax"), SubResource("AtlasTexture_uaf62"), SubResource("AtlasTexture_euhbg"), SubResource("AtlasTexture_74310"), SubResource("AtlasTexture_71mv5"), SubResource("AtlasTexture_kvkmr"), SubResource("AtlasTexture_8yv4a"), SubResource("AtlasTexture_qi0vg"), SubResource("AtlasTexture_j43yo"), SubResource("AtlasTexture_80e5q"), SubResource("AtlasTexture_l18o3"), SubResource("AtlasTexture_fj8vf"), SubResource("AtlasTexture_yqj5o"), SubResource("AtlasTexture_acpqa"), SubResource("AtlasTexture_krrv4")],
 "loop": false,
 "name": &"explosion",
 "speed": 25.0
@@ -335,21 +335,21 @@ tracks/6/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i1gif"]
 _data = {
-"Disappear": SubResource( "Animation_8xfum" ),
-"Explode": SubResource( "Animation_2ge80" ),
-"RESET": SubResource( "Animation_2vanl" )
+"Disappear": SubResource("Animation_8xfum"),
+"Explode": SubResource("Animation_2ge80"),
+"RESET": SubResource("Animation_2vanl")
 }
 
 [node name="ExplodingBomb" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource( "1_jlf8b" )
+script = ExtResource("1_jlf8b")
 
 [node name="RigidDynamicBody2D" type="RigidDynamicBody2D" parent="."]
 y_sort_enabled = true
 collision_layer = 16
 collision_mask = 19
 inertia = 1.0
-physics_material_override = SubResource( "PhysicsMaterial_3dfhm" )
+physics_material_override = SubResource("PhysicsMaterial_3dfhm")
 gravity_scale = 0.0
 contacts_reported = 1
 contact_monitor = true
@@ -359,30 +359,30 @@ linear_damp = 1.106
 [node name="Sprite" type="Sprite2D" parent="RigidDynamicBody2D"]
 position = Vector2(-2, -14)
 y_sort_enabled = true
-texture = ExtResource( "2_4tqbq" )
+texture = ExtResource("2_4tqbq")
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="RigidDynamicBody2D/Sprite"]
 position = Vector2(-16, -9)
 lifetime = 1.69
 speed_scale = 3.51
-process_material = SubResource( "ParticlesMaterial_ctqlr" )
-texture = ExtResource( "3_ve3s1" )
+process_material = SubResource("ParticlesMaterial_ctqlr")
+texture = ExtResource("3_ve3s1")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="RigidDynamicBody2D/Sprite"]
 position = Vector2(-16, -9)
 speed_scale = 3.51
-process_material = SubResource( "ParticlesMaterial_a2mvr" )
-texture = ExtResource( "3_ve3s1" )
+process_material = SubResource("ParticlesMaterial_a2mvr")
+texture = ExtResource("3_ve3s1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidDynamicBody2D"]
 y_sort_enabled = true
-shape = SubResource( "CircleShape2D_hxqpl" )
+shape = SubResource("CircleShape2D_hxqpl")
 
 [node name="Shadow" type="Sprite2D" parent="RigidDynamicBody2D"]
 position = Vector2(1, 0)
 scale = Vector2(0.399, 0.266)
 z_index = -1
-texture = ExtResource( "3_6a5oo" )
+texture = ExtResource("3_6a5oo")
 
 [node name="ExplodingArea" type="Area2D" parent="RigidDynamicBody2D"]
 collision_layer = 32
@@ -390,12 +390,12 @@ collision_mask = 90
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidDynamicBody2D/ExplodingArea"]
 modulate = Color(1, 0.231373, 0.164706, 0.415686)
-shape = SubResource( "CircleShape2D_jhpt5" )
+shape = SubResource("CircleShape2D_jhpt5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidDynamicBody2D"]
 position = Vector2(1, -1)
 y_sort_enabled = true
-frames = SubResource( "SpriteFrames_3ueob" )
+frames = SubResource("SpriteFrames_3ueob")
 animation = &"explosion"
 offset = Vector2(1, -3)
 
@@ -403,12 +403,12 @@ offset = Vector2(1, -3)
 visible = false
 position = Vector2(-1, 6)
 z_index = -1
-texture = ExtResource( "5_m0bgr" )
+texture = ExtResource("5_m0bgr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Explode"
 libraries = {
-"": SubResource( "AnimationLibrary_i1gif" )
+"": SubResource("AnimationLibrary_i1gif")
 }
 
 [connection signal="body_shape_entered" from="RigidDynamicBody2D/ExplodingArea" to="." method="_on_exploding_area_body_shape_entered"]

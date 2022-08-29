@@ -216,6 +216,8 @@ physics_layer_1/collision_mask = 0
 terrain_set_0/mode = 2
 terrain_set_0/terrain_0/name = "Holes"
 terrain_set_0/terrain_0/color = Color(0.501961, 0.345098, 0.25098, 1)
+custom_data_layer_0/name = ""
+custom_data_layer_0/type = 0
 sources/0 = SubResource("TileSetAtlasSource_fjj7s")
 
 [node name="Room" type="Node2D"]

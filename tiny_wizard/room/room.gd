@@ -92,12 +92,11 @@ func get_spawning_point(direction):
 func enter_room():
 	var enemies = $Enemies.get_children()
 	if enemies.size() > 0:
-		# Close doors
-		
-		
+		# Wake up Enemies
 		for enemy in enemies:
 			enemy.set_deferred("process_mode", Node.PROCESS_MODE_INHERIT)
 		
+		# Close doors
 		for d in [Direction.RIGHT, Direction.DOWN, Direction.LEFT, Direction.UP]:
 			close_door(d)
 		
