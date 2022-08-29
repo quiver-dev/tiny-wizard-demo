@@ -21,6 +21,7 @@ metadata/_edit_vertical_guides_ = [0.0]
 
 [node name="Character" parent="." instance=ExtResource("2_5wjcq")]
 position = Vector2(536, 592)
+gui_path = NodePath("../Camera2D/GUI")
 
 [node name="Rooms" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -68,3 +69,5 @@ smoothing_enabled = true
 smoothing_speed = 10.0
 
 [node name="GUI" parent="Camera2D" instance=ExtResource("13_ucw2f")]
+
+[connection signal="shoot" from="Character" to="Character/Visual/DistanceWeapon" method="shoot"]

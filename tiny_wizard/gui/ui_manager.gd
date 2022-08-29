@@ -4,5 +4,5 @@ extends CanvasLayer
 @export var inventory : Resource # TypeFix Inventory
 
 
-func arrow_changed():
-	$TopUI/TextureRect/HBoxContainer/MarginContainer/HBoxContainer/ArrowBox/Arrow.texture = inventory.current_arrow
+func change_arrow_texture(new_texture):
+	%ArrowUITexture.texture = new_texture

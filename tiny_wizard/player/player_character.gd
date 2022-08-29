@@ -1,6 +1,6 @@
 extends QuiverCharacter
 
-
+@export var gui_path: NodePath
 
 var arrow_types = {
 	'normal': preload("res://tiny_wizard/player/weapon/bullet/arrow.tscn"),
@@ -23,5 +23,7 @@ func _process(delta):
 func change_arrow(arrow_scene):
 	$Visual/DistanceWeapon.bullet_scene = arrow_scene
 #	inventory.current_arrow = arrow_scene.instantiate().icon
-	%ArrowUITexture.texture = arrow_scene.instantiate().icon
+	var gui = get_node_or_null(gui_path)
+	if gui != null:
+		gui.change_arrow_texture(arrow_scene.instantiate().icon)
 

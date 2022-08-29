@@ -57,6 +57,7 @@ func _ready():
 		enter_room()
 		var gui = GUI_SCENE.instantiate()
 		add_child(gui)
+		player_node.gui_path = gui.get_path()
 	pass
 
 # Get the position of the room on the level matrix: (0,0), (0,1)...

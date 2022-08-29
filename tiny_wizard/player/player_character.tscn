@@ -291,6 +291,7 @@ y_sort_enabled = true
 collision_layer = 2
 collision_mask = 97
 script = ExtResource("2_q71sv")
+gui_path = null
 character_stats = ExtResource("3_4j7bh")
 inventory = ExtResource("4_ubej3")
 physics_stats = SubResource("Resource_h2g7o")

@@ -6,12 +6,12 @@
 [ext_resource type="PackedScene" path="res://tiny_wizard/gui/inventory_ui/inventory_ui.tscn" id="4_80vvw"]
 [ext_resource type="PackedScene" path="res://tiny_wizard/gui/life_ui/hearts_ui.tscn" id="5_7glrf"]
 [ext_resource type="Resource" path="res://tiny_wizard/player/player_stats.tres" id="6_mshvq"]
-[ext_resource type="Texture2D" uid="uid://po7sckq8pbtr" path="res://tiny_wizard/assets/placeholder_art/tear.png" id="7_6oebw"]
+[ext_resource type="Texture2D" uid="uid://cuwusijx2588i" path="res://tiny_wizard/assets/art/arrow.png" id="7_8th4j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fe4ma"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sf2fl"]
-atlas = ExtResource("7_6oebw")
+atlas = ExtResource("7_8th4j")
 region = Rect2(0, 0, 100, 100)
 
 [node name="GUI" type="CanvasLayer"]

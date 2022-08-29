@@ -1,37 +1,36 @@
-[gd_scene load_steps=15 format=3 uid="uid://ctyodhlo6n01w"]
+[gd_scene load_steps=14 format=3 uid="uid://b6ikwtf8k4nt6"]
 
 [ext_resource type="PackedScene" uid="uid://bqsaw7jghbxn4" path="res://top-down-shooter-core/bullets/bullet.tscn" id="1_v0j7v"]
 [ext_resource type="Script" path="res://tiny_wizard/player/weapon/bullet/arrow.gd" id="2_5y2tp"]
-[ext_resource type="Texture2D" uid="uid://drob8sitillb8" path="res://tiny_wizard/assets/placeholder_art/violet_arrow.png" id="3_oaobx"]
-[ext_resource type="Texture2D" uid="uid://dibe6kvan6ix5" path="res://tiny_wizard/assets/art/violetarrows.png" id="4_6thdv"]
 [ext_resource type="Texture2D" uid="uid://u2qrtjpgbv2k" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="4_ajvt1"]
+[ext_resource type="Texture2D" uid="uid://dibe6kvan6ix5" path="res://tiny_wizard/assets/art/violet_arrow.png" id="4_k26la"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_en2w7"]
-atlas = ExtResource("3_oaobx")
+atlas = ExtResource("4_k26la")
 region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sp88s"]
-atlas = ExtResource("4_6thdv")
+atlas = ExtResource("4_k26la")
 region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_65sln"]
-atlas = ExtResource("4_6thdv")
+atlas = ExtResource("4_k26la")
 region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bp7sf"]
-atlas = ExtResource("4_6thdv")
+atlas = ExtResource("4_k26la")
 region = Rect2(200, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfe3d"]
-atlas = ExtResource("4_6thdv")
+atlas = ExtResource("4_k26la")
 region = Rect2(300, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ee0gy"]
-atlas = ExtResource("4_6thdv")
+atlas = ExtResource("4_k26la")
 region = Rect2(400, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rab7v"]
-atlas = ExtResource("4_6thdv")
+atlas = ExtResource("4_k26la")
 region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pclq8"]
