@@ -69,5 +69,3 @@ smoothing_enabled = true
 smoothing_speed = 10.0
 
 [node name="GUI" parent="Camera2D" instance=ExtResource("13_ucw2f")]
-
-[connection signal="shoot" from="Character" to="Character/Visual/DistanceWeapon" method="shoot"]
