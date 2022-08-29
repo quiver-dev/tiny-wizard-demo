@@ -245,6 +245,18 @@ tracks/7/keys = {
 "update": 1,
 "values": [true, true, false]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("RigidDynamicBody2D:freeze")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.01, 2.01),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_2vanl"]
 length = 0.001
@@ -332,6 +344,18 @@ tracks/6/keys = {
 "update": 0,
 "values": [true]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("RigidDynamicBody2D:freeze")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i1gif"]
 _data = {
@@ -393,7 +417,8 @@ modulate = Color(1, 0.231373, 0.164706, 0.415686)
 shape = SubResource("CircleShape2D_jhpt5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidDynamicBody2D"]
-position = Vector2(1, -1)
+position = Vector2(-2, -18)
+scale = Vector2(0.75, 0.75)
 y_sort_enabled = true
 frames = SubResource("SpriteFrames_3ueob")
 animation = &"explosion"

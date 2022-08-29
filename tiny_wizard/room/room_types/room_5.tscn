@@ -3,10 +3,28 @@
 [ext_resource type="PackedScene" uid="uid://de3l1l1odllgl" path="res://tiny_wizard/room/room.tscn" id="1_43kv8"]
 [ext_resource type="PackedScene" uid="uid://ch5dnqr8q5qdy" path="res://tiny_wizard/items/pickable_bomb/pickable_bomb.tscn" id="2_00t0x"]
 
-[node name="Room" instance=ExtResource( "1_43kv8" )]
+[node name="Room" instance=ExtResource("1_43kv8")]
 
-[node name="PickableBomb" parent="." index="7" instance=ExtResource( "2_00t0x" )]
+[node name="PickableBomb" parent="." index="7" instance=ExtResource("2_00t0x")]
 position = Vector2(455, 305)
 
-[node name="PickableBomb2" parent="." index="8" instance=ExtResource( "2_00t0x" )]
-position = Vector2(538, 302)
+[node name="PickableBomb3" parent="." index="8" instance=ExtResource("2_00t0x")]
+position = Vector2(398, 329)
+
+[node name="PickableBomb4" parent="." index="9" instance=ExtResource("2_00t0x")]
+position = Vector2(398, 329)
+
+[node name="PickableBomb2" parent="." index="10" instance=ExtResource("2_00t0x")]
+position = Vector2(513, 331)
+
+[node name="PickableBomb5" parent="." index="11" instance=ExtResource("2_00t0x")]
+position = Vector2(494, 300)
+
+[node name="PickableBomb6" parent="." index="12" instance=ExtResource("2_00t0x")]
+position = Vector2(455, 334)
+
+[node name="PickableBomb7" parent="." index="13" instance=ExtResource("2_00t0x")]
+position = Vector2(366, 295)
+
+[node name="PickableBomb8" parent="." index="14" instance=ExtResource("2_00t0x")]
+position = Vector2(321, 316)
