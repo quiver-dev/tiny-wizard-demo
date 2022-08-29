@@ -1,75 +1,81 @@
-[gd_scene load_steps=13 format=3 uid="uid://ctyodhlo6n01w"]
+[gd_scene load_steps=15 format=3 uid="uid://ctyodhlo6n01w"]
 
 [ext_resource type="PackedScene" uid="uid://bqsaw7jghbxn4" path="res://top-down-shooter-core/bullets/bullet.tscn" id="1_v0j7v"]
 [ext_resource type="Script" path="res://tiny_wizard/player/weapon/bullet/arrow.gd" id="2_5y2tp"]
-[ext_resource type="Texture2D" uid="uid://dcj5bv3fh0jfl" path="res://tiny_wizard/assets/placeholder_art/violet_arrow.png" id="3_oaobx"]
-[ext_resource type="Texture2D" uid="uid://07bwu3183fl" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="4_ajvt1"]
+[ext_resource type="Texture2D" uid="uid://drob8sitillb8" path="res://tiny_wizard/assets/placeholder_art/violet_arrow.png" id="3_oaobx"]
+[ext_resource type="Texture2D" uid="uid://dibe6kvan6ix5" path="res://tiny_wizard/assets/art/violetarrows.png" id="4_6thdv"]
+[ext_resource type="Texture2D" uid="uid://u2qrtjpgbv2k" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="4_ajvt1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_en2w7"]
-atlas = ExtResource( "3_oaobx" )
+atlas = ExtResource("3_oaobx")
 region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d0ru0"]
-atlas = ExtResource( "3_oaobx" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_sp88s"]
+atlas = ExtResource("4_6thdv")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65sln"]
+atlas = ExtResource("4_6thdv")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp7sf"]
+atlas = ExtResource("4_6thdv")
 region = Rect2(200, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5myku"]
-atlas = ExtResource( "3_oaobx" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfe3d"]
+atlas = ExtResource("4_6thdv")
 region = Rect2(300, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_22t1i"]
-atlas = ExtResource( "3_oaobx" )
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee0gy"]
+atlas = ExtResource("4_6thdv")
 region = Rect2(400, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kdgjc"]
-atlas = ExtResource( "3_oaobx" )
-region = Rect2(0, 0, 100, 100)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_buda5"]
-atlas = ExtResource( "3_oaobx" )
-region = Rect2(100, 0, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_rab7v"]
+atlas = ExtResource("4_6thdv")
+region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pclq8"]
 animations = [{
-"frames": [SubResource( "AtlasTexture_d0ru0" ), SubResource( "AtlasTexture_5myku" ), SubResource( "AtlasTexture_22t1i" ), null],
-"loop": false,
-"name": &"explode",
-"speed": 15.0
-}, {
-"frames": [SubResource( "AtlasTexture_kdgjc" ), SubResource( "AtlasTexture_buda5" )],
+"frames": [SubResource("AtlasTexture_sp88s"), SubResource("AtlasTexture_65sln")],
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [SubResource("AtlasTexture_bp7sf"), SubResource("AtlasTexture_hfe3d"), SubResource("AtlasTexture_ee0gy"), SubResource("AtlasTexture_rab7v")],
+"loop": false,
+"name": &"explode",
+"speed": 15.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dukfo"]
 radius = 8.33333
 
-[node name="Bullet" instance=ExtResource( "1_v0j7v" )]
+[node name="Bullet" instance=ExtResource("1_v0j7v")]
 position = Vector2(0, 0)
 scale = Vector2(0.6, 0.6)
 y_sort_enabled = true
 collision_mask = 73
-script = ExtResource( "2_5y2tp" )
+script = ExtResource("2_5y2tp")
+icon = SubResource("AtlasTexture_en2w7")
 speed = 600.0
 life_time = 1.2
 damage = 2.0
-icon = SubResource( "AtlasTexture_en2w7" )
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(1.66667, -26.6667)
 scale = Vector2(0.6, 0.6)
 y_sort_enabled = true
-frames = SubResource( "SpriteFrames_pclq8" )
+frames = SubResource("SpriteFrames_pclq8")
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 position = Vector2(0, -2.28882e-05)
-shape = SubResource( "CircleShape2D_dukfo" )
+shape = SubResource("CircleShape2D_dukfo")
 
 [node name="Shadow" type="Sprite2D" parent="." index="2"]
 modulate = Color(1, 1, 1, 0.458824)
 position = Vector2(0, 1.52588e-05)
 scale = Vector2(0.25, 0.25)
 z_index = -1
-texture = ExtResource( "4_ajvt1" )
+texture = ExtResource("4_ajvt1")
