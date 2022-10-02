@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://23m7r5q686kd" path="res://tiny_wizard/items/default_items/default_add_to_inventory_item.tscn" id="1_xatpr"]
 [ext_resource type="Resource" uid="uid://ca80nqtdifi7q" path="res://tiny_wizard/items/key/key.tres" id="2_dkjd1"]
-[ext_resource type="Texture2D" uid="uid://b2er80wkoc0wx" path="res://tiny_wizard/assets/placeholder_art/items/Key.png" id="3_1tq13"]
+[ext_resource type="Texture2D" uid="uid://b2er80wkoc0wx" path="res://tiny_wizard/assets/placeholder_art/items/key.png" id="3_1tq13"]
 
 [node name="Key" instance=ExtResource( "1_xatpr" )]
 item = ExtResource( "2_dkjd1" )
