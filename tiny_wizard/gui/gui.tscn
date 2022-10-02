@@ -19,76 +19,96 @@ layer = 0
 script = ExtResource("1_56tem")
 
 [node name="TopUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -800.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="TopUI"]
-offset_left = -4.0
-offset_right = 1030.0
-offset_bottom = 208.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 203.0
+grow_horizontal = 2
 texture = ExtResource("2_2gyvq")
 stretch_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="TopUI/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme_override_constants/margin_bottom = 20
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TopUI/TextureRect/MarginContainer"]
-offset_right = 1034.0
-offset_bottom = 188.0
+layout_mode = 2
+offset_right = 1024.0
+offset_bottom = 183.0
 
 [node name="VSeparator2" type="VSeparator" parent="TopUI/TextureRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
 offset_right = 50.0
-offset_bottom = 188.0
+offset_bottom = 183.0
 theme_override_constants/separation = 50
 theme_override_styles/separator = SubResource("StyleBoxFlat_fe4ma")
 
 [node name="Icon" type="TextureRect" parent="TopUI/TextureRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
 offset_left = 54.0
-offset_right = 358.0
-offset_bottom = 188.0
+offset_right = 354.0
+offset_bottom = 183.0
 size_flags_horizontal = 3
 texture = ExtResource("3_hwuvp")
 stretch_mode = 3
 
 [node name="InventoryUI" parent="TopUI/TextureRect/MarginContainer/HBoxContainer" instance=ExtResource("4_80vvw")]
-offset_left = 362.0
-offset_right = 404.0
-offset_bottom = 188.0
+layout_mode = 2
+offset_left = 358.0
+offset_right = 400.0
+offset_bottom = 183.0
 
 [node name="VSeparator" type="VSeparator" parent="TopUI/TextureRect/MarginContainer/HBoxContainer"]
-offset_left = 408.0
-offset_right = 418.0
-offset_bottom = 188.0
+layout_mode = 2
+offset_left = 404.0
+offset_right = 414.0
+offset_bottom = 183.0
 theme_override_constants/separation = 10
 theme_override_styles/separator = SubResource("StyleBoxFlat_fe4ma")
 
 [node name="MarginContainer" type="MarginContainer" parent="TopUI/TextureRect/MarginContainer/HBoxContainer"]
-offset_left = 422.0
-offset_right = 726.0
-offset_bottom = 188.0
+layout_mode = 2
+offset_left = 418.0
+offset_right = 719.0
+offset_bottom = 183.0
 size_flags_horizontal = 3
 
 [node name="HeartsUI" parent="TopUI/TextureRect/MarginContainer/HBoxContainer" instance=ExtResource("5_7glrf")]
+layout_mode = 2
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 880.0
-offset_right = 884.0
-offset_bottom = 188.0
+offset_left = 871.0
+offset_right = 875.0
+offset_bottom = 183.0
 size_flags_horizontal = 6
 player_stats = ExtResource("6_mshvq")
 
 [node name="CenterContainer" type="CenterContainer" parent="TopUI/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_bottom = -23.0
 
 [node name="ArrowUITexture" type="TextureRect" parent="TopUI/TextureRect/CenterContainer"]
 unique_name_in_owner = true
-offset_left = 467.0
-offset_top = 42.0
-offset_right = 567.0
-offset_bottom = 142.0
+layout_mode = 2
+offset_left = 462.0
+offset_top = 40.0
+offset_right = 562.0
+offset_bottom = 140.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("AtlasTexture_sf2fl")
