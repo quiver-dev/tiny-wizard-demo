@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cxl7rbtvsb5nc"]
+[gd_scene load_steps=15 format=3 uid="uid://cxl7rbtvsb5nc"]
 
 [ext_resource type="Script" path="res://tiny_wizard/tiny_wizard_main.gd" id="1_5rjdy"]
 [ext_resource type="PackedScene" uid="uid://bnuih6qfwgu2p" path="res://tiny_wizard/player/player_character.tscn" id="2_5wjcq"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://qdyhlh75eu6m" path="res://tiny_wizard/room/room_types/room_9.tscn" id="12_2njgv"]
 [ext_resource type="PackedScene" uid="uid://c45gqa1w6c20d" path="res://tiny_wizard/gui/gui.tscn" id="13_ucw2f"]
 [ext_resource type="PackedScene" uid="uid://d01c1dqufo578" path="res://tiny_wizard/room/room_types/room_1.tscn" id="14_cw4nu"]
+[ext_resource type="Resource" uid="uid://bpvgw7v25bbsx" path="res://tiny_wizard/player/inventory/inventory.tres" id="14_ui8tp"]
 [ext_resource type="PackedScene" uid="uid://c70wougnmqni2" path="res://tiny_wizard/room/room_types/room_2.tscn" id="16_mqrf6"]
 
 [node name="TinyWizardDemo" type="Node2D"]
@@ -69,3 +70,4 @@ smoothing_enabled = true
 smoothing_speed = 10.0
 
 [node name="GUI" parent="Camera2D" instance=ExtResource("13_ucw2f")]
+inventory = ExtResource("14_ui8tp")

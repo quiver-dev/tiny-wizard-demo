@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 
-@export var inventory : Resource # TypeFix Inventory
+@export var inventory : QuiverInventory
 
 
 func change_arrow_texture(new_texture):

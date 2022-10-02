@@ -3,5 +3,5 @@
 [ext_resource type="Script" path="res://top-down-shooter-core/inventory/inventory_.gd" id="1_kcdp7"]
 
 [resource]
-script = ExtResource( "1_kcdp7" )
+script = ExtResource("1_kcdp7")
 max_size = 9

@@ -1,6 +1,6 @@
 extends MarginContainer
 
-@export var inventory : Resource # TypeFix Inventory
+@export var inventory : QuiverInventory
 
 
 @onready var counters = {
