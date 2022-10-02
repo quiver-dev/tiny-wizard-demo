@@ -135,6 +135,7 @@ config/icon="res://icon.png"
 
 [display]
 
+window/size/viewport_width=1024
 window/size/viewport_height=800
 window/stretch/mode="canvas_items"
 
