@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://c81dr52jie1dv"]
 
 [ext_resource type="PackedScene" path="res://top-down-shooter-core/weapons/melee_weapon.tscn" id="1_n8l2s"]
 
-[node name="MeleeWeapon" instance=ExtResource( "1_n8l2s" )]
+[node name="MeleeWeapon" instance=ExtResource("1_n8l2s")]
 collision_mask = 2
 damage = 1.0

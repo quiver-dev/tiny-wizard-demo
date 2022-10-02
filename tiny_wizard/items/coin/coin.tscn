@@ -13,7 +13,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../RigidDynamicBody2D/Item:scale")
+tracks/0/path = NodePath("../RigidBody2D/Item:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -29,7 +29,7 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../RigidDynamicBody2D/Item:scale")
+tracks/0/path = NodePath("../RigidBody2D/Item:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -50,10 +50,10 @@ _data = {
 [node name="Coin" instance=ExtResource( "1_cwhcf" )]
 item = ExtResource( "2_7pv83" )
 
-[node name="CollisionShape2D" parent="RigidDynamicBody2D" index="0"]
+[node name="CollisionShape2D" parent="RigidBody2D" index="0"]
 shape = SubResource( "CircleShape2D_7afo6" )
 
-[node name="Item" parent="RigidDynamicBody2D" index="1"]
+[node name="Item" parent="RigidBody2D" index="1"]
 position = Vector2(1, -1)
 texture = ExtResource( "2_p00h8" )
 offset = Vector2(2, -5)

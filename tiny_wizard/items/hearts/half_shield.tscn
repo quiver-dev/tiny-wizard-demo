@@ -7,5 +7,5 @@
 [node name="HalfShield" instance=ExtResource("1_ciw66")]
 item = ExtResource("2_aovbb")
 
-[node name="Item" parent="RigidDynamicBody2D" index="1"]
+[node name="Item" parent="RigidBody2D" index="1"]
 texture = ExtResource("3_sxg4x")

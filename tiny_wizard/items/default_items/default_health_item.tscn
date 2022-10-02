@@ -8,7 +8,7 @@
 [node name="DefaultHealthItem" instance=ExtResource("1_ieg5c")]
 item = ExtResource("2_ere8g")
 
-[node name="Item" parent="RigidDynamicBody2D" index="1"]
+[node name="Item" parent="RigidBody2D" index="1"]
 texture = ExtResource("3_q3oyd")
 
 [node name="Action" parent="." index="1"]

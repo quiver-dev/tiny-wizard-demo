@@ -2,15 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://23m7r5q686kd" path="res://tiny_wizard/items/default_items/default_add_to_inventory_item.tscn" id="1_e4aaw"]
 [ext_resource type="Resource" uid="uid://dns8t84rxp4x5" path="res://tiny_wizard/items/pickable_bomb/bomb.tres" id="2_1323s"]
-[ext_resource type="Texture2D" uid="uid://2i8fpu882uck" path="res://tiny_wizard/assets/placeholder_art/items/Bomb.png" id="2_xwlei"]
+[ext_resource type="Texture2D" uid="uid://2i8fpu882uck" path="res://tiny_wizard/assets/placeholder_art/items/bomb.png" id="2_xwlei"]
 
 [node name="PickableBomb" instance=ExtResource( "1_e4aaw" )]
 item = ExtResource( "2_1323s" )
 
-[node name="Item" parent="RigidDynamicBody2D" index="1"]
+[node name="Item" parent="RigidBody2D" index="1"]
 position = Vector2(-1, -16)
 texture = ExtResource( "2_xwlei" )
 
-[node name="Shadow" parent="RigidDynamicBody2D" index="2"]
+[node name="Shadow" parent="RigidBody2D" index="2"]
 position = Vector2(1, -1.67277)
 scale = Vector2(0.342105, 0.259598)

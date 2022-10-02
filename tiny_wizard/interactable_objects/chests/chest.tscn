@@ -15,7 +15,7 @@ script = ExtResource("2_lsfc8")
 items = null
 metadata/items = []
 
-[node name="Object" parent="RigidDynamicBody2D" index="0"]
+[node name="Object" parent="RigidBody2D" index="0"]
 position = Vector2(2, -21)
 z_index = -1
 y_sort_enabled = true
@@ -23,10 +23,10 @@ texture = ExtResource("3_l3g5r")
 script = ExtResource("3_ne01s")
 open_texture = ExtResource("5_6k8xq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidDynamicBody2D" index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="1"]
 position = Vector2(1, -17)
 shape = SubResource("CircleShape2D_yy5pk")
 
 [node name="Action" parent="." index="1"]
 script = ExtResource("4_3i1hb")
-chest_sprite = NodePath("../RigidDynamicBody2D/Object")
+chest_sprite = NodePath("../RigidBody2D/Object")

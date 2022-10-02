@@ -20,7 +20,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../RigidDynamicBody2D/Item:scale")
+tracks/0/path = NodePath("../RigidBody2D/Item:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -36,7 +36,7 @@ length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../RigidDynamicBody2D/Item:scale")
+tracks/0/path = NodePath("../RigidBody2D/Item:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -57,7 +57,7 @@ _data = {
 [node name="DefaultItem" instance=ExtResource( "1_tuxjg" )]
 y_sort_enabled = true
 
-[node name="RigidDynamicBody2D" type="RigidDynamicBody2D" parent="." index="0"]
+[node name="RigidBody2D" type="RigidBody2D" parent="." index="0"]
 y_sort_enabled = true
 collision_layer = 16
 collision_mask = 115
@@ -70,14 +70,14 @@ contact_monitor = true
 lock_rotation = true
 linear_damp = 6.541
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidDynamicBody2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="0"]
 position = Vector2(1, -10)
 shape = SubResource( "CircleShape2D_7afo6" )
 
-[node name="Item" type="Sprite2D" parent="RigidDynamicBody2D" index="1"]
+[node name="Item" type="Sprite2D" parent="RigidBody2D" index="1"]
 position = Vector2(4, -13)
 
-[node name="Shadow" type="Sprite2D" parent="RigidDynamicBody2D" index="2"]
+[node name="Shadow" type="Sprite2D" parent="RigidBody2D" index="2"]
 modulate = Color(1, 1, 1, 0.709804)
 position = Vector2(2, -1)
 scale = Vector2(0.356781, 0.235315)
@@ -94,7 +94,7 @@ animation_name = "bump"
 
 [node name="InteractMechanic" parent="." index="2"]
 script = ExtResource( "2_w8b4r" )
-object_body_path = NodePath("../RigidDynamicBody2D")
+object_body_path = NodePath("../RigidBody2D")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
 root_node = NodePath("../Action")

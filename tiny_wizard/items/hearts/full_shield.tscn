@@ -7,5 +7,5 @@
 [node name="FullShield" instance=ExtResource("1_shcai")]
 item = ExtResource("2_5cres")
 
-[node name="Item" parent="RigidDynamicBody2D" index="1"]
+[node name="Item" parent="RigidBody2D" index="1"]
 texture = ExtResource("3_faysd")

@@ -16,12 +16,12 @@ func explode():
 	
 	play_anim()
 	
-	var exploding_area : Area2D = $RigidDynamicBody2D/ExplodingArea
+	var exploding_area : Area2D = $RigidBody2D/ExplodingArea
 	
-	var explode_position = $RigidDynamicBody2D.global_position
+	var explode_position = $RigidBody2D.global_position
 	
 	for thing in exploding_area.get_overlapping_bodies():
-		if thing != $RigidDynamicBody2D:
+		if thing != $RigidBody2D:
 			if thing is TileMap:
 				update_tilemap(thing)
 
@@ -36,10 +36,10 @@ func update_tilemap(tilemap: TileMap):
 		tilemap.set_cell(0, coords, 0, Vector2i(4,2))
 
 func play_anim():
-	($RigidDynamicBody2D/AnimatedSprite2D as AnimatedSprite2D).play("explosion")
+	($RigidBody2D/AnimatedSprite2D as AnimatedSprite2D).play("explosion")
 
 func queue_free():
-	var ground_trace = $RigidDynamicBody2D/GroundBombTrace
+	var ground_trace = $RigidBody2D/GroundBombTrace
 	var pos = ground_trace.global_position
 	ground_trace.get_parent().remove_child(ground_trace)
 	add_sibling(ground_trace)

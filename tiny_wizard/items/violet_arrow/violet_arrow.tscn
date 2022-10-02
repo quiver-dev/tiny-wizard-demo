@@ -15,16 +15,16 @@ region = Rect2(0, 0, 100, 100)
 [node name="VioletArrow" instance=ExtResource("1_aa2ce")]
 item = ExtResource("2_hi8tp")
 
-[node name="CollisionShape2D" parent="RigidDynamicBody2D" index="0"]
+[node name="CollisionShape2D" parent="RigidBody2D" index="0"]
 position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_a4x3i")
 
-[node name="Item" parent="RigidDynamicBody2D" index="1"]
+[node name="Item" parent="RigidBody2D" index="1"]
 position = Vector2(0, -13)
 y_sort_enabled = true
 texture = SubResource("AtlasTexture_t72wp")
 
-[node name="Shadow" parent="RigidDynamicBody2D" index="2"]
+[node name="Shadow" parent="RigidBody2D" index="2"]
 position = Vector2(1, -1.67277)
 scale = Vector2(0.342105, 0.259598)
 

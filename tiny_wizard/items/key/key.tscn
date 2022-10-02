@@ -7,11 +7,11 @@
 [node name="Key" instance=ExtResource( "1_xatpr" )]
 item = ExtResource( "2_dkjd1" )
 
-[node name="Item" parent="RigidDynamicBody2D" index="1"]
+[node name="Item" parent="RigidBody2D" index="1"]
 position = Vector2(1, -11)
 texture = ExtResource( "3_1tq13" )
 
-[node name="Shadow" parent="RigidDynamicBody2D" index="2"]
+[node name="Shadow" parent="RigidBody2D" index="2"]
 position = Vector2(0.999998, -1.17277)
 scale = Vector2(0.526316, 0.287376)
 
