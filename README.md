@@ -3,7 +3,7 @@ An open source 2D Godot 4 game template in the style of *The Binding of Isaac*.
 Created by [Quiver](https://quiver.dev).
 
 ## Features
-- Built on Quiver's [top-down shooter template] (https://github.com/quiver-dev/top-down-shooter-godot4)
+- Built on Quiver's [top-down shooter template](https://github.com/quiver-dev/top-down-shooter-godot4)
 - 4-way character movement
 - Room-based system with unlocking doors
 - Multiple projectile weapons and bombs
