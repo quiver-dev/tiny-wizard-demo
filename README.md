@@ -18,7 +18,8 @@ Created by [Quiver](https://quiver.dev).
 
 ## Installation Instructions
 * Clone this repository from Github
-* Run ```git submodule update --init``` do initialize the top down shooter submodule
+* Run ```git submodule update --init``` to initialize the top-down shooter submodule
+* Open the Godot project file and run it to play the *Tiny Wizard* demo!
 
 ## Questions/Bugs/Suggestions
 For bugs and feature requests, feel free to file an issue here or comment on this template's [project page](https://quiver.dev/assets/game-templates/tiny-wizard-top-down-shooter-binding-of-isaac-godot-4/).
