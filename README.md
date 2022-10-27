@@ -2,6 +2,11 @@
 An open source 2D Godot 4 game template in the style of *The Binding of Isaac*.
 Created by [Quiver](https://quiver.dev).
 
+## Trailer
+[![Tiny Wizard Trailer](https://image.mux.com/cCIN6Sj1SURW00zjcZwTFjixhoChIrCMqaxzJwJDTFXY/animated.gif?start=19&end=26)](https://quiver.dev/assets/game-templates/tiny-wizard-top-down-shooter-binding-of-isaac-godot-4/#lg=1&slide=0)
+
+(click to watch the full trailer!)
+
 ## Features
 - Built on Quiver's [top-down shooter template](https://github.com/quiver-dev/top-down-shooter-godot4)
 - 4-way character movement
