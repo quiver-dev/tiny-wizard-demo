@@ -16,6 +16,9 @@ Created by [Quiver](https://quiver.dev).
 - Tilemaps
 - Inventory UI
 
+## Requirements
+* Godot 4 Beta or higher
+
 ## Installation Instructions
 * Clone this repository from Github
 * Run ```git submodule update --init``` to initialize the top-down shooter submodule
