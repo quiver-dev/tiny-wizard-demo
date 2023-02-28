@@ -37,7 +37,7 @@ func update_visual(action: QuiverCharacterAction):
 	if action.aiming_direction.length() > 0:
 		_apply_head_rotation(action.aiming_direction.angle())
 	else:
-		if !head.playing:
+		if !head.is_playing():
 			head.frame = 0
 			head.animation = 'default'
 			hat.scale = Vector2.ONE
@@ -54,13 +54,12 @@ func _apply_body_rotation(angle):
 func _apply_head_rotation(angle):
 	var k = int(round(angle/(2*PI/rotation_clamping)))
 	k = (k+rotation_clamping)%rotation_clamping
-	if head.animation != 'shoot_' + str(k) or !head.playing:
+	if head.animation != 'shoot_' + str(k) or !head.is_playing():
 		# Orientate weapon
 		weapon.shoot_direction = Vector2.RIGHT.rotated((k*2*PI)/rotation_clamping)
 		
 		head.frame = 0
 		head.play('shoot_' + str(k))
-		head.playing = true
 	
 
 	hat.scale = Vector2(int(k!=2)*2-1,1)

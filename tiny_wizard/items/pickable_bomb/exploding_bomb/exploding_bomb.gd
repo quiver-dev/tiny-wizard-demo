@@ -5,14 +5,11 @@ const TILE_MAP_RANGE = 40
 var active = true
 
 var stone_rids = []
-#func _ready():
-#	play_anim()
+
+func _ready():
+	self.tree_exited.connect(_on_tree_exited)
 
 func explode():
-#	if !active: return
-#
-#	# Eplode Bomb
-#	active = false
 	
 	play_anim()
 	
@@ -38,20 +35,16 @@ func update_tilemap(tilemap: TileMap):
 func play_anim():
 	($RigidBody2D/AnimatedSprite2D as AnimatedSprite2D).play("explosion")
 
-func queue_free():
+func _on_tree_exited():
 	var ground_trace = $RigidBody2D/GroundBombTrace
 	var pos = ground_trace.global_position
 	ground_trace.get_parent().remove_child(ground_trace)
 	add_sibling(ground_trace)
 	ground_trace.global_position = pos
-	super.queue_free()
-
-
 
 func _on_exploding_area_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body is TileMap:
 		stone_rids.append(body_rid)
-
 
 func _on_exploding_area_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
 	if body is TileMap:

@@ -2,79 +2,96 @@
 
 [ext_resource type="PackedScene" uid="uid://bqsaw7jghbxn4" path="res://top-down-shooter-core/bullets/bullet.tscn" id="1_v0j7v"]
 [ext_resource type="Script" path="res://tiny_wizard/player/weapon/bullet/arrow.gd" id="2_5y2tp"]
-[ext_resource type="Texture2D" uid="uid://u2qrtjpgbv2k" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="4_ajvt1"]
-[ext_resource type="Texture2D" uid="uid://dibe6kvan6ix5" path="res://tiny_wizard/assets/art/violet_arrow.png" id="4_k26la"]
+[ext_resource type="Texture2D" uid="uid://cjjugml0purnn" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="4_ajvt1"]
+[ext_resource type="Texture2D" uid="uid://ckcoy8y88yst0" path="res://tiny_wizard/assets/art/violet_arrow.png" id="4_k26la"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_en2w7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wj2ee"]
 atlas = ExtResource("4_k26la")
 region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sp88s"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vw8k"]
 atlas = ExtResource("4_k26la")
 region = Rect2(0, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_65sln"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jc6up"]
 atlas = ExtResource("4_k26la")
 region = Rect2(100, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bp7sf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4ud3"]
 atlas = ExtResource("4_k26la")
 region = Rect2(200, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hfe3d"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nntcr"]
 atlas = ExtResource("4_k26la")
 region = Rect2(300, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ee0gy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6lrj"]
 atlas = ExtResource("4_k26la")
 region = Rect2(400, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rab7v"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjjca"]
 atlas = ExtResource("4_k26la")
 region = Rect2(500, 0, 100, 100)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_pclq8"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_uh41j"]
 animations = [{
-"frames": [SubResource("AtlasTexture_sp88s"), SubResource("AtlasTexture_65sln")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vw8k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jc6up")
+}],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }, {
-"frames": [SubResource("AtlasTexture_bp7sf"), SubResource("AtlasTexture_hfe3d"), SubResource("AtlasTexture_ee0gy"), SubResource("AtlasTexture_rab7v")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4ud3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nntcr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6lrj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjjca")
+}],
 "loop": false,
 "name": &"explode",
 "speed": 15.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_dukfo"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_cc8co"]
 radius = 8.33333
 
 [node name="Bullet" instance=ExtResource("1_v0j7v")]
+y_sort_enabled = true
 position = Vector2(0, 0)
 scale = Vector2(0.6, 0.6)
-y_sort_enabled = true
 collision_mask = 73
 script = ExtResource("2_5y2tp")
-icon = SubResource("AtlasTexture_en2w7")
+icon = SubResource("AtlasTexture_wj2ee")
 speed = 600.0
 life_time = 1.2
 damage = 2.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
+y_sort_enabled = true
 position = Vector2(1.66667, -26.6667)
 scale = Vector2(0.6, 0.6)
-y_sort_enabled = true
-frames = SubResource("SpriteFrames_pclq8")
-frame = 1
-playing = true
+sprite_frames = SubResource("SpriteFrames_uh41j")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 position = Vector2(0, -2.28882e-05)
-shape = SubResource("CircleShape2D_dukfo")
+shape = SubResource("CircleShape2D_cc8co")
 
 [node name="Shadow" type="Sprite2D" parent="." index="2"]
 modulate = Color(1, 1, 1, 0.458824)
+z_index = -1
 position = Vector2(0, 1.52588e-05)
 scale = Vector2(0.25, 0.25)
-z_index = -1
 texture = ExtResource("4_ajvt1")

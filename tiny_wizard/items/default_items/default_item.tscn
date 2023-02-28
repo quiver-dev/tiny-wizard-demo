@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://d1wr7q5evnxmw" path="res://top-down-shooter-core/items/pickable_items/pickable_item.tscn" id="1_tuxjg"]
 [ext_resource type="Script" path="res://top-down-shooter-core/interactable_objects/interact_mechanics/interact_on_collide.gd" id="2_w8b4r"]
-[ext_resource type="Texture2D" uid="uid://07bwu3183fl" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="2_wkavh"]
+[ext_resource type="Texture2D" uid="uid://cjjugml0purnn" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="2_wkavh"]
 [ext_resource type="AnimationLibrary" uid="uid://04e7u2gpyy16" path="res://tiny_wizard/interactable_objects/objects_anim_lib.tres" id="3_kwbxb"]
 [ext_resource type="Script" path="res://top-down-shooter-core/interactable_objects/actions/destroy_object.gd" id="3_x7lgx"]
 [ext_resource type="Script" path="res://top-down-shooter-core/interactable_objects/actions/play_animation.gd" id="4_qjjgh"]
@@ -48,13 +48,13 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d2gsa"]
 _data = {
-"RESET": SubResource( "Animation_32cud" ),
-"bump": SubResource( "Animation_xtw0f" )
+"RESET": SubResource("Animation_32cud"),
+"bump": SubResource("Animation_xtw0f")
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cdgy0"]
 
-[node name="DefaultItem" instance=ExtResource( "1_tuxjg" )]
+[node name="DefaultItem" instance=ExtResource("1_tuxjg")]
 y_sort_enabled = true
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." index="0"]
@@ -63,43 +63,42 @@ collision_layer = 16
 collision_mask = 115
 mass = 0.77
 inertia = 0.02
-physics_material_override = SubResource( "PhysicsMaterial_3dfhm" )
+physics_material_override = SubResource("PhysicsMaterial_3dfhm")
 gravity_scale = 0.0
-contacts_reported = 1
 contact_monitor = true
 lock_rotation = true
 linear_damp = 6.541
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" index="0"]
 position = Vector2(1, -10)
-shape = SubResource( "CircleShape2D_7afo6" )
+shape = SubResource("CircleShape2D_7afo6")
 
 [node name="Item" type="Sprite2D" parent="RigidBody2D" index="1"]
 position = Vector2(4, -13)
 
 [node name="Shadow" type="Sprite2D" parent="RigidBody2D" index="2"]
 modulate = Color(1, 1, 1, 0.709804)
+z_index = -1
 position = Vector2(2, -1)
 scale = Vector2(0.356781, 0.235315)
-z_index = -1
-texture = ExtResource( "2_wkavh" )
+texture = ExtResource("2_wkavh")
 
 [node name="OnSuccess" type="Node2D" parent="Action" index="0"]
-script = ExtResource( "3_x7lgx" )
+script = ExtResource("3_x7lgx")
 
 [node name="OnFailure" type="Node2D" parent="Action" index="1"]
-script = ExtResource( "4_qjjgh" )
+script = ExtResource("4_qjjgh")
 animation_player_path = NodePath("../../AnimationPlayer")
 animation_name = "bump"
 
 [node name="InteractMechanic" parent="." index="2"]
-script = ExtResource( "2_w8b4r" )
+script = ExtResource("2_w8b4r")
 object_body_path = NodePath("../RigidBody2D")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
 root_node = NodePath("../Action")
 libraries = {
-"": SubResource( "AnimationLibrary_d2gsa" ),
-"Item": SubResource( "AnimationLibrary_cdgy0" ),
-"objects_anim_lib": ExtResource( "3_kwbxb" )
+"": SubResource("AnimationLibrary_d2gsa"),
+"Item": SubResource("AnimationLibrary_cdgy0"),
+"objects_anim_lib": ExtResource("3_kwbxb")
 }

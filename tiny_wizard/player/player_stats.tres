@@ -1,7 +1,7 @@
-[gd_resource type="Resource" load_steps=2 format=3]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bx4cpu32gty6d"]
 
 [ext_resource type="Script" path="res://tiny_wizard/player/player_stats.gd" id="1_fpjwe"]
 
 [resource]
-script = ExtResource( "1_fpjwe" )
+script = ExtResource("1_fpjwe")
 max_life = 6

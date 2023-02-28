@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://djs45wxhgd1ma" path="res://tiny_wizard/items/default_items/default_item.tscn" id="1_aa2ce"]
 [ext_resource type="Resource" uid="uid://cewe5atrwbmch" path="res://tiny_wizard/items/violet_arrow/violet_arrow.tres" id="2_hi8tp"]
-[ext_resource type="Texture2D" uid="uid://dibe6kvan6ix5" path="res://tiny_wizard/assets/art/violet_arrow.png" id="3_a2rxj"]
+[ext_resource type="Texture2D" uid="uid://ckcoy8y88yst0" path="res://tiny_wizard/assets/art/violet_arrow.png" id="3_a2rxj"]
 [ext_resource type="Script" path="res://top-down-shooter-core/items/pickable_items/pick_item_actions/use_item.gd" id="5_qf8us"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a4x3i"]
@@ -20,8 +20,8 @@ position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_a4x3i")
 
 [node name="Item" parent="RigidBody2D" index="1"]
-position = Vector2(0, -13)
 y_sort_enabled = true
+position = Vector2(0, -13)
 texture = SubResource("AtlasTexture_t72wp")
 
 [node name="Shadow" parent="RigidBody2D" index="2"]

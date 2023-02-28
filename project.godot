@@ -8,124 +8,6 @@
 
 config_version=5
 
-_global_script_classes=[{
-"base": "RigidBody2D",
-"class": &"QuiverBullet",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/bullets/bullet.gd"
-}, {
-"base": "CharacterBody2D",
-"class": &"QuiverCharacter",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/character/character.gd"
-}, {
-"base": "Object",
-"class": &"QuiverCharacterAction",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/character/character_action.gd"
-}, {
-"base": "Node2D",
-"class": &"QuiverCharacterBehavior",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/character/behavior/behavior.gd"
-}, {
-"base": "Resource",
-"class": &"QuiverCharacterStats",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/character/character_stats/character_stats.gd"
-}, {
-"base": "Node2D",
-"class": &"QuiverCharacterVisual",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/character/visual/visual.gd"
-}, {
-"base": "Node2D",
-"class": &"QuiverInteractMechanic",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/interactable_objects/interact_mechanics/_interact_mechanic.gd"
-}, {
-"base": "Node2D",
-"class": &"QuiverInteractableObject",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/interactable_objects/interactable_object.gd"
-}, {
-"base": "Node2D",
-"class": &"QuiverInteractableObjectAction",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/interactable_objects/actions/_action.gd"
-}, {
-"base": "Resource",
-"class": &"QuiverInventory",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/inventory/inventory_.gd"
-}, {
-"base": "Resource",
-"class": &"QuiverItem",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/items/item.gd"
-}, {
-"base": "Resource",
-"class": &"QuiverItemUseAction",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/items/use_actions/_use_action.gd"
-}, {
-"base": "QuiverItemUseAction",
-"class": &"QuiverItemUseActionEquipBullet",
-"language": &"GDScript",
-"path": "res://tiny_wizard/items/violet_arrow/equip_bullet.gd"
-}, {
-"base": "QuiverItemUseAction",
-"class": &"QuiverItemUseActionHealCharacter",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/items/use_actions/heal_character.gd"
-}, {
-"base": "QuiverItemUseAction",
-"class": &"QuiverItemUseSpawnAScene",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/items/use_actions/spawn_a_scene.gd"
-}, {
-"base": "Resource",
-"class": &"QuiverMagazine",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/weapons/magazine.gd"
-}, {
-"base": "Resource",
-"class": &"QuiverPhysicsStats",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/character/character_stats/physics_stats.gd"
-}, {
-"base": "QuiverInteractableObjectAction",
-"class": &"QuiverPickItemAction",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/items/pickable_items/pick_item_actions/_pick_item_action.gd"
-}, {
-"base": "QuiverInteractableObject",
-"class": &"QuiverPickableItem",
-"language": &"GDScript",
-"path": "res://top-down-shooter-core/items/pickable_items/pickable_item.gd"
-}]
-_global_script_class_icons={
-"QuiverBullet": "",
-"QuiverCharacter": "",
-"QuiverCharacterAction": "",
-"QuiverCharacterBehavior": "",
-"QuiverCharacterStats": "",
-"QuiverCharacterVisual": "",
-"QuiverInteractMechanic": "",
-"QuiverInteractableObject": "",
-"QuiverInteractableObjectAction": "",
-"QuiverInventory": "",
-"QuiverItem": "",
-"QuiverItemUseAction": "",
-"QuiverItemUseActionEquipBullet": "",
-"QuiverItemUseActionHealCharacter": "",
-"QuiverItemUseSpawnAScene": "",
-"QuiverMagazine": "",
-"QuiverPhysicsStats": "",
-"QuiverPickItemAction": "",
-"QuiverPickableItem": ""
-}
-
 [application]
 
 config/name="tiny-wizard-demo"
@@ -143,22 +25,22 @@ window/stretch/mode="canvas_items"
 
 player_up={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 player_down={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"unicode":115,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"echo":false,"script":null)
 ]
 }
 player_left={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 player_right={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 fire={
@@ -168,27 +50,27 @@ fire={
 }
 player_shoot_up={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194320,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194320,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 player_shoot_down={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194322,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194322,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 player_shoot_left={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194319,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194319,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 player_shoot_right={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194321,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194321,"physical_keycode":0,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 drop_bomb={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 

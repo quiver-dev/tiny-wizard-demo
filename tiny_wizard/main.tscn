@@ -65,9 +65,6 @@ position = Vector2(-1024, 200)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
-current = true
-smoothing_enabled = true
-smoothing_speed = 10.0
 
 [node name="GUI" parent="Camera2D" instance=ExtResource("13_ucw2f")]
 inventory = ExtResource("14_ui8tp")

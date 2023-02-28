@@ -1,11 +1,11 @@
 [gd_scene load_steps=35 format=3 uid="uid://dppu1vhjy1n1g"]
 
 [ext_resource type="Script" path="res://tiny_wizard/items/pickable_bomb/exploding_bomb/exploding_bomb.gd" id="1_jlf8b"]
-[ext_resource type="Texture2D" path="res://tiny_wizard/assets/placeholder_art/items/bomb.png" id="2_4tqbq"]
-[ext_resource type="Texture2D" uid="uid://u2qrtjpgbv2k" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="3_6a5oo"]
-[ext_resource type="Texture2D" uid="uid://5kp53r44h5na" path="res://tiny_wizard/assets/placeholder_art/cirle_particle.png" id="3_ve3s1"]
-[ext_resource type="Texture2D" uid="uid://bk56deby3bo3f" path="res://tiny_wizard/assets/placeholder_art/ground_bomb_trace.png" id="5_m0bgr"]
-[ext_resource type="Texture2D" uid="uid://bgpm7hssikrkl" path="res://tiny_wizard/assets/art/bomb_explode.png" id="5_p4d5h"]
+[ext_resource type="Texture2D" uid="uid://f4c432cbhn1u" path="res://tiny_wizard/assets/placeholder_art/items/bomb.png" id="2_4tqbq"]
+[ext_resource type="Texture2D" uid="uid://cjjugml0purnn" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="3_6a5oo"]
+[ext_resource type="Texture2D" uid="uid://bov30xsh3t18w" path="res://tiny_wizard/assets/placeholder_art/cirle_particle.png" id="3_ve3s1"]
+[ext_resource type="Texture2D" uid="uid://dqf5vs3gpkjvx" path="res://tiny_wizard/assets/placeholder_art/ground_bomb_trace.png" id="5_m0bgr"]
+[ext_resource type="Texture2D" uid="uid://cceweiyxj57dr" path="res://tiny_wizard/assets/art/bomb_explode.png" id="5_p4d5h"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3dfhm"]
 friction = 100.0
@@ -19,7 +19,7 @@ point_count = 2
 [sub_resource type="CurveTexture" id="CurveTexture_jvw6x"]
 curve = SubResource("Curve_5pkwd")
 
-[sub_resource type="ParticlesMaterial" id="ParticlesMaterial_ctqlr"]
+[sub_resource type="ParticleProcessMaterial" id="ParticlesMaterial_ctqlr"]
 particle_flag_disable_z = true
 direction = Vector3(100, 0, 0)
 spread = 180.0
@@ -32,7 +32,7 @@ scale_max = 0.11
 scale_curve = SubResource("CurveTexture_jvw6x")
 color = Color(1, 0.85098, 0.211765, 1)
 
-[sub_resource type="ParticlesMaterial" id="ParticlesMaterial_a2mvr"]
+[sub_resource type="ParticleProcessMaterial" id="ParticlesMaterial_a2mvr"]
 particle_flag_disable_z = true
 direction = Vector3(100, 0, 0)
 spread = 180.0
@@ -51,13 +51,13 @@ radius = 8.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_jhpt5"]
 radius = 125.004
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gpisd"]
-atlas = ExtResource("5_p4d5h")
-region = Rect2(344, 0, 344, 344)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ehax"]
 atlas = ExtResource("5_p4d5h")
 region = Rect2(0, 0, 344, 344)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpisd"]
+atlas = ExtResource("5_p4d5h")
+region = Rect2(344, 0, 344, 344)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uaf62"]
 atlas = ExtResource("5_p4d5h")
@@ -117,10 +117,63 @@ region = Rect2(1032, 1032, 344, 344)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3ueob"]
 animations = [{
-"frames": [null, SubResource("AtlasTexture_gpisd"), SubResource("AtlasTexture_5ehax"), SubResource("AtlasTexture_uaf62"), SubResource("AtlasTexture_euhbg"), SubResource("AtlasTexture_74310"), SubResource("AtlasTexture_71mv5"), SubResource("AtlasTexture_kvkmr"), SubResource("AtlasTexture_8yv4a"), SubResource("AtlasTexture_qi0vg"), SubResource("AtlasTexture_j43yo"), SubResource("AtlasTexture_80e5q"), SubResource("AtlasTexture_l18o3"), SubResource("AtlasTexture_fj8vf"), SubResource("AtlasTexture_yqj5o"), SubResource("AtlasTexture_acpqa"), SubResource("AtlasTexture_krrv4")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ehax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpisd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uaf62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_euhbg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74310")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71mv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvkmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yv4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi0vg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j43yo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80e5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l18o3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fj8vf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqj5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acpqa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krrv4")
+}],
 "loop": false,
 "name": &"explosion",
 "speed": 25.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
 }]
 
 [sub_resource type="Animation" id="Animation_8xfum"]
@@ -375,37 +428,36 @@ collision_mask = 19
 inertia = 1.0
 physics_material_override = SubResource("PhysicsMaterial_3dfhm")
 gravity_scale = 0.0
-contacts_reported = 1
 contact_monitor = true
 lock_rotation = true
 linear_damp = 1.106
 
 [node name="Sprite" type="Sprite2D" parent="RigidBody2D"]
-position = Vector2(-2, -14)
 y_sort_enabled = true
+position = Vector2(-2, -14)
 texture = ExtResource("2_4tqbq")
 
 [node name="GPUParticles2D2" type="GPUParticles2D" parent="RigidBody2D/Sprite"]
 position = Vector2(-16, -9)
-lifetime = 1.69
-speed_scale = 3.51
 process_material = SubResource("ParticlesMaterial_ctqlr")
 texture = ExtResource("3_ve3s1")
+lifetime = 1.69
+speed_scale = 3.51
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="RigidBody2D/Sprite"]
 position = Vector2(-16, -9)
-speed_scale = 3.51
 process_material = SubResource("ParticlesMaterial_a2mvr")
 texture = ExtResource("3_ve3s1")
+speed_scale = 3.51
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 y_sort_enabled = true
 shape = SubResource("CircleShape2D_hxqpl")
 
 [node name="Shadow" type="Sprite2D" parent="RigidBody2D"]
+z_index = -1
 position = Vector2(1, 0)
 scale = Vector2(0.399, 0.266)
-z_index = -1
 texture = ExtResource("3_6a5oo")
 
 [node name="ExplodingArea" type="Area2D" parent="RigidBody2D"]
@@ -417,17 +469,18 @@ modulate = Color(1, 0.231373, 0.164706, 0.415686)
 shape = SubResource("CircleShape2D_jhpt5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D"]
+y_sort_enabled = true
 position = Vector2(-2, -18)
 scale = Vector2(0.75, 0.75)
-y_sort_enabled = true
-frames = SubResource("SpriteFrames_3ueob")
-animation = &"explosion"
+sprite_frames = SubResource("SpriteFrames_3ueob")
+animation = &"idle"
+autoplay = "idle"
 offset = Vector2(1, -3)
 
 [node name="GroundBombTrace" type="Sprite2D" parent="RigidBody2D"]
 visible = false
-position = Vector2(-1, 6)
 z_index = -1
+position = Vector2(-1, 6)
 texture = ExtResource("5_m0bgr")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

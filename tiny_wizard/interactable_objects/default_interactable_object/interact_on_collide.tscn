@@ -42,13 +42,13 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d2gsa"]
 _data = {
-"RESET": SubResource( "Animation_32cud" ),
-"bump": SubResource( "Animation_xtw0f" )
+"RESET": SubResource("Animation_32cud"),
+"bump": SubResource("Animation_xtw0f")
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cdgy0"]
 
-[node name="InteractableObject" instance=ExtResource( "1_h53o5" )]
+[node name="InteractableObject" instance=ExtResource("1_h53o5")]
 y_sort_enabled = true
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." index="0"]
@@ -56,9 +56,8 @@ y_sort_enabled = true
 collision_layer = 16
 collision_mask = 115
 inertia = 1.0
-physics_material_override = SubResource( "PhysicsMaterial_3dhe5" )
+physics_material_override = SubResource("PhysicsMaterial_3dhe5")
 gravity_scale = 0.0
-contacts_reported = 1
 contact_monitor = true
 lock_rotation = true
 linear_damp = 54.058
@@ -68,18 +67,18 @@ linear_damp = 54.058
 [node name="OnSuccess" type="Node2D" parent="Action" index="0"]
 
 [node name="OnFailure" type="Node2D" parent="Action" index="1"]
-script = ExtResource( "2_1ayrx" )
+script = ExtResource("2_1ayrx")
 animation_player_path = NodePath("../../AnimationPlayer")
 animation_name = "bump"
 
 [node name="InteractMechanic" parent="." index="2"]
-script = ExtResource( "2_ykpmf" )
+script = ExtResource("2_ykpmf")
 object_body_path = NodePath("../RigidBody2D")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="3"]
 root_node = NodePath("../Action")
 libraries = {
-"": SubResource( "AnimationLibrary_d2gsa" ),
-"Item": SubResource( "AnimationLibrary_cdgy0" ),
-"objects_anim_lib": ExtResource( "3_nqbdb" )
+"": SubResource("AnimationLibrary_d2gsa"),
+"Item": SubResource("AnimationLibrary_cdgy0"),
+"objects_anim_lib": ExtResource("3_nqbdb")
 }

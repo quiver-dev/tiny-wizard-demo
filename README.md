@@ -22,7 +22,7 @@ Created by [Quiver](https://quiver.dev).
 - Inventory UI
 
 ## Requirements
-* Godot 4 Beta or higher
+* Godot 4.0 RC 6 or higher
 
 ## Installation Instructions
 * Clone this repository from Github

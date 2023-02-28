@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/character_stats.gd" id="2_72r4n"]
 [ext_resource type="Script" path="res://tiny_wizard/enemies/black_fly/Visual.gd" id="2_w4t8f"]
 [ext_resource type="Script" path="res://top-down-shooter-core/character/character_stats/physics_stats.gd" id="3_acbgk"]
-[ext_resource type="Texture2D" uid="uid://u2qrtjpgbv2k" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="3_m8u5l"]
-[ext_resource type="Texture2D" uid="uid://c0plc77imddvj" path="res://tiny_wizard/assets/placeholder_art/red_fly.png" id="5_sbtwb"]
+[ext_resource type="Texture2D" uid="uid://cjjugml0purnn" path="res://tiny_wizard/assets/placeholder_art/shadow.png" id="3_m8u5l"]
+[ext_resource type="Texture2D" uid="uid://c20wpkdou740u" path="res://tiny_wizard/assets/placeholder_art/red_fly.png" id="5_sbtwb"]
 [ext_resource type="Script" path="res://tiny_wizard/enemies/red_fly/red_fly_behavior.gd" id="7_a27uj"]
 [ext_resource type="PackedScene" uid="uid://c81dr52jie1dv" path="res://tiny_wizard/enemies/red_fly/red_fly_weapon.tscn" id="7_g7bvv"]
 [ext_resource type="PackedScene" uid="uid://cbx5e1m0wvfyn" path="res://top-down-shooter-core/character/behavior/behavior_modules/player_detector.tscn" id="8_8aefy"]
@@ -33,7 +33,13 @@ region = Rect2(60, 0, 60, 60)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_63q4l"]
 animations = [{
-"frames": [SubResource("AtlasTexture_g200e"), SubResource("AtlasTexture_qrmuw")],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g200e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrmuw")
+}],
 "loop": true,
 "name": &"default",
 "speed": 15.0
@@ -50,8 +56,8 @@ radius = 7.0
 
 [node name="RedFly" instance=ExtResource("1_5wxj1")]
 process_mode = 4
-scale = Vector2(0.6, 0.6)
 y_sort_enabled = true
+scale = Vector2(0.6, 0.6)
 disable_mode = 1
 collision_layer = 8
 character_stats = SubResource("Resource_l4q4c")
@@ -62,9 +68,8 @@ script = ExtResource("2_w4t8f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visual" index="0"]
 position = Vector2(0, -52)
-frames = SubResource("SpriteFrames_63q4l")
-frame = 1
-playing = true
+sprite_frames = SubResource("SpriteFrames_63q4l")
+autoplay = "default"
 
 [node name="Shadow" type="Sprite2D" parent="Visual" index="1"]
 modulate = Color(1, 1, 1, 0.384314)

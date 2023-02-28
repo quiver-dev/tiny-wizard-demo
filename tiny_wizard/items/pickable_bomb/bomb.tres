@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=5 format=3 uid="uid://dns8t84rxp4x5"]
+[gd_resource type="Resource" script_class="QuiverItem" load_steps=5 format=3 uid="uid://dns8t84rxp4x5"]
 
 [ext_resource type="Script" path="res://top-down-shooter-core/items/item.gd" id="1_2ib5n"]
 [ext_resource type="PackedScene" uid="uid://dppu1vhjy1n1g" path="res://tiny_wizard/items/pickable_bomb/exploding_bomb/exploding_bomb.tscn" id="2_qfkbo"]

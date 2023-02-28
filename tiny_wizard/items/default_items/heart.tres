@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://b6lwohkppiocx"]
+[gd_resource type="Resource" script_class="QuiverItem" load_steps=4 format=3 uid="uid://b6lwohkppiocx"]
 
 [ext_resource type="Script" path="res://top-down-shooter-core/items/item.gd" id="1_pdifm"]
 [ext_resource type="Script" path="res://top-down-shooter-core/items/use_actions/heal_character.gd" id="2_kc5xy"]

@@ -6,8 +6,10 @@ extends QuiverBullet
 
 var _freed := false
 
+func _ready():
+	self.tree_exited.connect(_on_tree_exited)
 
-func queue_free():
+func _on_tree_exited():
 	if _freed: return
 	_freed = true
 	$AnimatedSprite2D.play("explode")
