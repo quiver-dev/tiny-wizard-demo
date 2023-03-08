@@ -1,4 +1,5 @@
 @tool
+class_name Room
 extends Node2D
 
 enum Direction {RIGHT, DOWN, LEFT, UP}
@@ -58,7 +59,6 @@ func _ready():
 		var gui = GUI_SCENE.instantiate()
 		add_child(gui)
 		player_node.gui_path = gui.get_path()
-	pass
 
 # Get the position of the room on the level matrix: (0,0), (0,1)...
 func get_room_matrix_position()->Vector2i:
@@ -100,8 +100,6 @@ func enter_room():
 		# Close doors
 		for d in [Direction.RIGHT, Direction.DOWN, Direction.LEFT, Direction.UP]:
 			close_door(d)
-		
-		pass
 
 func enter_door(_body, door_direction):
 	door_entered.emit(door_direction)

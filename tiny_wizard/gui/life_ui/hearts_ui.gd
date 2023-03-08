@@ -70,7 +70,3 @@ func update_ui():
 			shield_count -= 1
 		elif shield_count <= 0:
 			shield.set_state(EMPTY)
-			
-	
-	
-	pass

@@ -9,9 +9,6 @@ var items := []
 
 @onready var chest = get_node(chest_sprite)
 
-func _ready():
-	pass
-
 func trigger(object: QuiverInteractableObject, character: QuiverCharacter):
 	var next_action = get_node_or_null("OnFailure")
 
